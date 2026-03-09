@@ -1,5 +1,6 @@
 from __future__ import annotations
 
+import json
 from copy import deepcopy
 from typing import Any
 import sys
@@ -636,7 +637,7 @@ def main() -> None:
         with st.expander('Search filters', expanded=False):
             filtered_public = run_filters(public_records)
 
-        header_cols = st.columns([1, 1, 3])
+        header_cols = st.columns([1, 1, 1, 2])
         with header_cols[0]:
             st.markdown(f'**{len(filtered_public)}** shown / {len(public_records)} total')
         with header_cols[1]:
@@ -648,6 +649,9 @@ def main() -> None:
                     st.code(str(exc))
                 else:
                     st.success(f'Public JSON regenerated: {PUBLIC_RECORDS_PATH.name}')
+        with header_cols[2]:
+            public_json = json.dumps(public_records, ensure_ascii=False, indent=2)
+            st.download_button('Download JSON', data=public_json, file_name='public_records.json', mime='application/json')
 
         if not filtered_public:
             st.info('No matching records.')
