@@ -571,7 +571,7 @@ def main() -> None:
                 '3. 修正したいレコードの行にある **「Edit」** ボタンを押す\n'
                 '4. フォームが開くので内容を修正して **「Save」**\n\n'
                 '#### STEP 3 : 公開用 JSON を生成する\n'
-                '1. 一覧画面の **「Regenerate public JSON」** ボタンを押す\n'
+                '1. List 画面の **「Regenerate public JSON」** ボタンを押す\n'
                 '2. `data/public_records.json` が最新の内容で上書きされる\n\n'
                 '#### STEP 4 : フロントエンドに反映する\n'
                 '1. 生成された **`data/public_records.json`** を先生に渡す\n'
