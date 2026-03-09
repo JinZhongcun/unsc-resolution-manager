@@ -826,27 +826,31 @@ def main() -> None:
             end = min(start + PAGE_SIZE, total)
             page_records = filtered_public[start:end]
 
-            if total_pages > 1:
+            def render_pagination(suffix: str) -> None:
+                if total_pages <= 1:
+                    return
                 page_cols = st.columns(min(total_pages, 10) + 2)
                 with page_cols[0]:
                     if current_page > 1:
-                        if st.button('◀', key='page_prev'):
+                        if st.button('◀', key=f'page_prev_{suffix}'):
                             st.session_state['list_page'] = current_page - 1
                             st.session_state['list_open_id'] = None
                             st.rerun()
                 for p in range(1, min(total_pages + 1, 11)):
                     with page_cols[p]:
-                        if st.button(str(p), key=f'page_{p}', type='primary' if p == current_page else 'secondary'):
+                        if st.button(str(p), key=f'page_{p}_{suffix}', type='primary' if p == current_page else 'secondary'):
                             st.session_state['list_page'] = p
                             st.session_state['list_open_id'] = None
                             st.rerun()
                 with page_cols[-1]:
                     if current_page < total_pages:
-                        if st.button('▶', key='page_next'):
+                        if st.button('▶', key=f'page_next_{suffix}'):
                             st.session_state['list_page'] = current_page + 1
                             st.session_state['list_open_id'] = None
                             st.rerun()
                 st.caption(f'Page {current_page} / {total_pages}')
+
+            render_pagination('top')
 
             open_id = st.session_state.get('list_open_id')
             for row_idx, rec in enumerate(page_records, start=start):
@@ -882,6 +886,8 @@ def main() -> None:
                         st.session_state['list_open_id'] = None
                         st.rerun()
                     st.divider()
+
+            render_pagination('bottom')
 
     # ── Editor view ──
     elif active_view == TAB_EDITOR:
