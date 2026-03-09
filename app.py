@@ -594,16 +594,16 @@ def main() -> None:
                 '2. 「Search filters」を開いて年・地域・カテゴリなどで絞り込める\n'
                 '3. 修正したいレコードの行にある **「Edit」** ボタンを押す\n'
                 '4. フォームが開くので内容を修正して **「Save」**\n\n'
-                '#### STEP 3 : 公開用 JSON を生成する\n'
-                '1. List 画面の **「Regenerate public JSON」** ボタンを押す\n'
-                '2. `data/public_records.json` が最新の内容で上書きされる\n\n'
+                '#### STEP 3 : 公開用 JSON をダウンロードする\n'
+                '1. List 画面の **「Download public JSON」** ボタンを押す\n'
+                '2. 最新の `public_records.json` が自動生成されてダウンロードされる\n\n'
                 '#### STEP 4 : フロントエンドに反映する\n'
                 '1. 生成された **`data/public_records.json`** を先生に渡す\n'
                 '2. 先生がフロント側のリポジトリにファイルを配置してデプロイ\n'
                 '3. 公開サイトに反映される\n\n'
                 '---\n'
                 '*Save のたびに公開用JSONも自動更新されます。'
-                '「Regenerate public JSON」は、手動で最新状態を作り直したいときに使ってください。*'
+                '「Download public JSON」で最新版をダウンロードできます。*'
             )
         with help_en:
             st.info(
@@ -620,17 +620,18 @@ def main() -> None:
                 '2. Open **"Search filters"** to filter by year, region, category, etc.\n'
                 '3. Click **"Edit"** on the row you want to modify\n'
                 '4. Update the form and click **"Save"**\n\n'
-                '#### STEP 3 : Generate public JSON\n'
-                '1. On the list view, click **"Regenerate public JSON"**\n'
-                '2. `data/public_records.json` will be overwritten with the latest data\n\n'
+                '#### STEP 3 : Download public JSON\n'
+                '1. On the list view, click **"Download public JSON"**\n'
+                '2. The latest `public_records.json` is auto-generated and downloaded\n\n'
                 '#### STEP 4 : Deploy to the frontend\n'
                 '1. Hand the generated **`data/public_records.json`** to Prof. Lim\n'
                 '2. Prof. Lim places the file in the frontend repository and deploys\n'
                 '3. The public site is updated\n\n'
                 '---\n'
-                '*Public JSON is also auto-updated on every save. '
-                'Use "Regenerate public JSON" to manually rebuild it when needed.*'
+                '*Public JSON is auto-updated on every save. '
+                'Use "Download public JSON" to get the latest version.*'
             )
+        return
 
     # ── List view ──
     if active_view == TAB_LIST:
