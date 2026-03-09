@@ -793,8 +793,42 @@ def main() -> None:
         if not filtered_public:
             st.info('No matching records.')
         else:
+            PAGE_SIZE = 50
+            total = len(filtered_public)
+            total_pages = max(1, (total + PAGE_SIZE - 1) // PAGE_SIZE)
+            init_if_missing('list_page', 1)
+            current_page = st.session_state['list_page']
+            if current_page > total_pages:
+                current_page = total_pages
+                st.session_state['list_page'] = current_page
+            start = (current_page - 1) * PAGE_SIZE
+            end = min(start + PAGE_SIZE, total)
+            page_records = filtered_public[start:end]
+
+            if total_pages > 1:
+                page_cols = st.columns(min(total_pages, 10) + 2)
+                with page_cols[0]:
+                    if current_page > 1:
+                        if st.button('◀', key='page_prev'):
+                            st.session_state['list_page'] = current_page - 1
+                            st.session_state['list_open_id'] = None
+                            st.rerun()
+                for p in range(1, min(total_pages + 1, 11)):
+                    with page_cols[p]:
+                        if st.button(str(p), key=f'page_{p}', type='primary' if p == current_page else 'secondary'):
+                            st.session_state['list_page'] = p
+                            st.session_state['list_open_id'] = None
+                            st.rerun()
+                with page_cols[-1]:
+                    if current_page < total_pages:
+                        if st.button('▶', key='page_next'):
+                            st.session_state['list_page'] = current_page + 1
+                            st.session_state['list_open_id'] = None
+                            st.rerun()
+                st.caption(f'Page {current_page} / {total_pages}')
+
             open_id = st.session_state.get('list_open_id')
-            for row_idx, rec in enumerate(filtered_public):
+            for row_idx, rec in enumerate(page_records, start=start):
                 rec_id = rec['record_id']
                 res_num = rec.get('resolution_number', '')
                 date = rec.get('date', '')
