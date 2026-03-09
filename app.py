@@ -532,6 +532,7 @@ def run_filters(public_records: list[dict[str, Any]]) -> list[dict[str, Any]]:
 
 TAB_LIST = '📋 List'
 TAB_EDITOR = '✏️ Edit'
+TAB_HELP = 'Help'
 TAB_KEY = 'active_view'
 
 
@@ -574,10 +575,16 @@ def main() -> None:
             key='nav_list',
         )
     with nav_cols[3]:
-        show_help = st.button('Help', key='nav_help', use_container_width=True)
+        st.button(
+            TAB_HELP,
+            use_container_width=True,
+            type='primary' if st.session_state[TAB_KEY] == TAB_HELP else 'secondary',
+            on_click=lambda: st.session_state.__setitem__(TAB_KEY, TAB_HELP),
+            key='nav_help',
+        )
     active_view = st.session_state[TAB_KEY]
 
-    if show_help:
+    if active_view == TAB_HELP:
         help_ja, help_en = st.columns(2)
         with help_ja:
             st.info(
