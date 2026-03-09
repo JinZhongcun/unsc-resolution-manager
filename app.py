@@ -506,8 +506,8 @@ def run_filters(public_records: list[dict[str, Any]]) -> list[dict[str, Any]]:
 
 
 
-TAB_LIST = '📋 一覧'
-TAB_EDITOR = '✏️ 登録/編集'
+TAB_LIST = '📋 List'
+TAB_EDITOR = '✏️ Edit'
 TAB_KEY = 'active_view'
 
 
@@ -560,13 +560,13 @@ def main() -> None:
                 '### 使い方ガイド\n\n'
                 '---\n'
                 '#### STEP 1 : レコードを登録する\n'
-                '1. **「✏️ 登録/編集」** ボタンを押す\n'
+                '1. **「✏️ Edit」** ボタンを押す\n'
                 '2. **「New」** を押すと空のフォームが開く\n'
                 '3. Resolution number・日付・タイトルなど必要な項目を入力\n'
                 '4. Sanctions や UN peace operations が該当する場合は「Add ... block」で入力欄を追加\n'
                 '5. 入力が終わったら **「Save」** ボタンを押す\n\n'
                 '#### STEP 2 : 登録済みレコードを確認・修正する\n'
-                '1. **「📋 一覧」** ボタンを押す\n'
+                '1. **「📋 List」** ボタンを押す\n'
                 '2. 「Search filters」を開いて年・地域・カテゴリなどで絞り込める\n'
                 '3. 修正したいレコードの行にある **「Edit」** ボタンを押す\n'
                 '4. フォームが開くので内容を修正して **「Save」**\n\n'
@@ -586,13 +586,13 @@ def main() -> None:
                 '### How to Use\n\n'
                 '---\n'
                 '#### STEP 1 : Register a record\n'
-                '1. Click the **"✏️ 登録/編集"** button\n'
+                '1. Click the **"✏️ Edit"** button\n'
                 '2. Click **"New"** to open a blank form\n'
                 '3. Fill in Resolution number, date, title, and other fields\n'
                 '4. If applicable, click **"Add ... block"** to add Sanctions or UN peace operations sections\n'
                 '5. Click **"Save"** when done\n\n'
                 '#### STEP 2 : Review / edit existing records\n'
-                '1. Click the **"📋 一覧"** button\n'
+                '1. Click the **"📋 List"** button\n'
                 '2. Open **"Search filters"** to filter by year, region, category, etc.\n'
                 '3. Click **"Edit"** on the row you want to modify\n'
                 '4. Update the form and click **"Save"**\n\n'
@@ -608,7 +608,7 @@ def main() -> None:
                 'Use "Regenerate public JSON" to manually rebuild it when needed.*'
             )
 
-    # ── 一覧ビュー ──
+    # ── List view ──
     if active_view == TAB_LIST:
         with st.expander('Search filters', expanded=False):
             filtered_public = run_filters(public_records)
@@ -644,7 +644,7 @@ def main() -> None:
                 with cols[5]:
                     st.button('Edit', key=f'edit_row_{row_idx}', on_click=_switch_to_editor, args=(record_by_id[rec['record_id']],))
 
-    # ── 登録/編集ビュー ──
+    # ── Editor view ──
     elif active_view == TAB_EDITOR:
         editor_top = st.columns([1, 1, 3])
         with editor_top[0]:
