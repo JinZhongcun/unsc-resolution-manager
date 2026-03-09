@@ -663,19 +663,16 @@ def main() -> None:
             st.info('No matching records.')
         else:
             for row_idx, rec in enumerate(filtered_public):
-                cols = st.columns([1.5, 1, 3, 2, 2, 0.8])
-                with cols[0]:
-                    st.text(rec.get('resolution_number', ''))
-                with cols[1]:
-                    st.text(rec.get('date', ''))
-                with cols[2]:
-                    st.text(rec.get('resolution_title', '') or '')
-                with cols[3]:
-                    st.text(', '.join(rec.get('geographical_locations', [])))
-                with cols[4]:
-                    st.text(', '.join(rec.get('categories_present', [])))
-                with cols[5]:
+                res_num = rec.get('resolution_number', '')
+                date = rec.get('date', '')
+                title = rec.get('resolution_title', '') or ''
+                geo = ', '.join(rec.get('geographical_locations', []))
+                label = f"**{res_num}** | {date} | {title}"
+                if geo:
+                    label += f" | {geo}"
+                with st.expander(label, expanded=False):
                     st.button('Edit', key=f'edit_row_{row_idx}', on_click=_switch_to_editor, args=(record_by_id[rec['record_id']],))
+                    st.json(rec.get('detail', rec))
 
     # ── Editor view ──
     elif active_view == TAB_EDITOR:
