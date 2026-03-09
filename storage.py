@@ -31,7 +31,7 @@ def _load_json(path: Path) -> Any:
     try:
         return json.loads(text)
     except json.JSONDecodeError as exc:
-        raise ValueError(f'{path.name} の JSON が壊れています。ファイル内容を修正してください。詳細: {exc}') from exc
+        raise ValueError(f'{path.name}: JSON is corrupted. Please fix the file. Detail: {exc}') from exc
 
 
 
@@ -39,7 +39,7 @@ def load_records() -> list[dict[str, Any]]:
     ensure_data_files()
     data = _load_json(RECORDS_PATH)
     if not isinstance(data, list):
-        raise ValueError('records.json は配列である必要があります。')
+        raise ValueError('records.json must be an array.')
     return data
 
 
@@ -48,7 +48,7 @@ def load_public_records() -> list[dict[str, Any]]:
     ensure_data_files()
     data = _load_json(PUBLIC_RECORDS_PATH)
     if not isinstance(data, list):
-        raise ValueError('public_records.json は配列である必要があります。')
+        raise ValueError('public_records.json must be an array.')
     return data
 
 

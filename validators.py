@@ -67,13 +67,13 @@ def _optional_int(value: Any, *, field: str, errors: list[str], minimum: int = 0
     try:
         parsed = int(raw)
     except (TypeError, ValueError):
-        errors.append(f'{field} は整数で入力してください。')
+        errors.append(f'{field}: must be an integer.')
         return None
     if parsed < minimum:
-        errors.append(f'{field} は {minimum} 以上で入力してください。')
+        errors.append(f'{field}: must be {minimum} or greater.')
         return None
     if maximum is not None and parsed > maximum:
-        errors.append(f'{field} は {maximum} 以下で入力してください。')
+        errors.append(f'{field}: must be {maximum} or less.')
         return None
     return parsed
 
@@ -83,14 +83,14 @@ def _date_to_iso(value: Any, *, field: str, errors: list[str], required: bool = 
     raw = _string(value)
     if raw == '':
         if required:
-            errors.append(f'{field} は必須です。')
+            errors.append(f'{field}: required.')
         return ''
-    for fmt in ('%Y-%m-%d', '%d/%m/%Y', '%Y/%m/%d'):
+    for fmt in ('%Y-%m-%d', '%Y%m%d', '%d/%m/%Y', '%Y/%m/%d'):
         try:
             return datetime.strptime(raw, fmt).date().isoformat()
         except ValueError:
             pass
-    errors.append(f'{field} の日付形式が正しくありません。YYYY-MM-DD または DD/MM/YYYY を使用してください。')
+    errors.append(f'{field}: invalid date format. Use YYYYMMDD or YYYY-MM-DD e.g. 20170905')
     return ''
 
 
@@ -99,7 +99,7 @@ def _single_select(value: Any, options: list[str], *, field: str, errors: list[s
     if value in (None, ''):
         return None
     if value not in options:
-        errors.append(f'{field} の値が選択肢にありません。')
+        errors.append(f'{field}: value is not a valid option.')
         return None
     return value
 
@@ -115,7 +115,7 @@ def _multi_select(value: Any, options: list[str], *, field: str, errors: list[st
         if item in ('', None):
             continue
         if item not in options:
-            errors.append(f'{field} の値 {item} は選択肢にありません。')
+            errors.append(f'{field}: "{item}" is not a valid option.')
             continue
         if item not in seen:
             seen.add(item)
@@ -181,7 +181,7 @@ def _normalize_time_period(value: dict[str, Any], *, field: str, errors: list[st
     mode_display = value.get('mode')
     mode = TIME_PERIOD_MODE_MAP.get(mode_display) if mode_display else None
     if mode_display not in (None, '') and mode_display not in TIME_PERIOD_MODE_OPTIONS:
-        errors.append(f'{field} の mode が選択肢にありません。')
+        errors.append(f'{field}: mode is not a valid option.')
     duration_value = _optional_int(value.get('duration_value'), field=f'{field} duration_value', errors=errors, minimum=0)
     duration_unit = _single_select(value.get('duration_unit'), DURATION_UNIT_OPTIONS, field=f'{field} duration_unit', errors=errors)
     until_date = _date_to_iso(value.get('until_date'), field=f'{field} until_date', errors=errors, required=False)
@@ -195,13 +195,13 @@ def _normalize_time_period(value: dict[str, Any], *, field: str, errors: list[st
         return normalized
     if mode.endswith('_for'):
         if duration_value is None:
-            errors.append(f'{field} は for モードのとき期間数値が必要です。')
+            errors.append(f'{field}: duration value is required for "for" mode.')
         if duration_unit is None:
-            errors.append(f'{field} は for モードのとき期間単位が必要です。')
+            errors.append(f'{field}: duration unit is required for "for" mode.')
         normalized['until_date'] = None
     elif mode.endswith('_until'):
         if not until_date:
-            errors.append(f'{field} は until モードのとき日付が必要です。')
+            errors.append(f'{field}: date is required for "until" mode.')
         normalized['duration_value'] = None
         normalized['duration_unit'] = None
     return normalized
@@ -218,7 +218,7 @@ def _normalize_modified_resolution(value: dict[str, Any], errors: list[str]) -> 
         maximum=9999,
     )
     if enabled and resolution_number is None:
-        errors.append('Modified resolution が Yes のとき resolution number が必要です。')
+        errors.append('Modified resolution: resolution number is required when enabled.')
     if not enabled:
         resolution_number = None
     return {'enabled': enabled, 'resolution_number': resolution_number}
@@ -233,10 +233,10 @@ def _normalize_transfer(value: dict[str, Any], errors: list[str]) -> dict[str, A
         direction = TRANSFER_DIRECTION_MAP[direction_display]
     else:
         direction = None
-        errors.append('Inter-mission loan/transfer の方向が選択肢にありません。')
+        errors.append('Inter-mission loan/transfer: direction is not a valid option.')
     target = _string(value.get('target'))
     if direction and not target:
-        errors.append('Inter-mission loan/transfer の対象は必須です。')
+        errors.append('Inter-mission loan/transfer: target is required when direction is set.')
     if not direction:
         target = ''
     return {'direction': direction, 'target': target}
@@ -317,18 +317,18 @@ def normalize_record(record: dict[str, Any]) -> tuple[dict[str, Any], list[str]]
     general = source.get('general', {})
     normalized['general']['un_document_url'] = _string(general.get('un_document_url'))
     if not normalized['general']['un_document_url']:
-        errors.append('UN document URL は必須です。')
+        errors.append('UN document URL: required.')
     elif not _valid_url(normalized['general']['un_document_url']):
-        errors.append('UN document URL は http(s) URL で入力してください。')
+        errors.append('UN document URL: must be an http(s) URL.')
     normalized['general']['resolution_number'] = _optional_int(general.get('resolution_number'), field='Resolution number', errors=errors, minimum=0, maximum=9999)
     if normalized['general']['resolution_number'] is None:
-        errors.append('Resolution number は必須です。')
+        errors.append('Resolution number: required.')
     normalized['general']['date'] = _date_to_iso(general.get('date'), field='Date', errors=errors, required=True)
     normalized['general']['meeting_number'] = _optional_int(general.get('meeting_number'), field='Meeting number', errors=errors, minimum=0)
     normalized['general']['geographical_locations'] = _multi_select(general.get('geographical_locations'), COUNTRY_REGION_OPTIONS, field='Geographical location', errors=errors)
     normalized['general']['resolution_title'] = _string(general.get('resolution_title'))
     if not normalized['general']['resolution_title']:
-        errors.append('Resolution title は必須です。')
+        errors.append('Resolution title: required.')
     normalized['general']['references_resolutions'] = _int_list(general.get('references_resolutions'), field='References (resolutions)', errors=errors, maximum=9999)
     normalized['general']['references_prst'] = _text_list(general.get('references_prst'))
     normalized['general']['references_other'] = _text_list(general.get('references_other'))

@@ -180,16 +180,16 @@ def render_dynamic_string_list(title: str, list_key: str, values: list[Any]) -> 
 def render_general_section(record: dict[str, Any]) -> None:
     general = record['general']
     st.subheader('General')
-    render_text('UN document URL', 'editor_general_un_document_url', general.get('un_document_url'), 'URL of the UN page linked from search results')
+    render_text('UN document URL *', 'editor_general_un_document_url', general.get('un_document_url'), 'Required. Full URL starting with https://  e.g. https://undocs.org/S/RES/2374(2017)')
     cols = st.columns(3)
     with cols[0]:
-        render_text('Resolution number', 'editor_general_resolution_number', general.get('resolution_number'))
+        render_text('Resolution number *', 'editor_general_resolution_number', general.get('resolution_number'), 'Required. Integer, e.g. 2374')
     with cols[1]:
-        render_text('Date', 'editor_general_date', general.get('date'), 'YYYY-MM-DD or DD/MM/YYYY')
+        render_text('Date *', 'editor_general_date', general.get('date'), 'Required. YYYYMMDD or YYYY-MM-DD e.g. 20170905')
     with cols[2]:
-        render_text('Meeting number', 'editor_general_meeting_number', general.get('meeting_number'))
+        render_text('Meeting number', 'editor_general_meeting_number', general.get('meeting_number'), 'Integer, e.g. 8040')
     render_multiselect('Geographical location', 'editor_general_geographical_locations', COUNTRY_REGION_OPTIONS, general.get('geographical_locations', []))
-    render_text('Resolution title', 'editor_general_resolution_title', general.get('resolution_title'))
+    render_text('Resolution title *', 'editor_general_resolution_title', general.get('resolution_title'), 'Required. e.g. The situation in Mali')
     render_dynamic_string_list('References (resolutions)', 'references_resolutions', general.get('references_resolutions', []))
     render_dynamic_string_list('References (PRST)', 'references_prst', general.get('references_prst', []))
     render_dynamic_string_list('References (other)', 'references_other', general.get('references_other', []))
@@ -204,16 +204,16 @@ def render_general_section(record: dict[str, Any]) -> None:
 
 def render_time_period(prefix: str, title: str, current: dict[str, Any]) -> None:
     st.markdown(f'**{title}**')
-    render_select('Mode', f'{prefix}_mode', TIME_PERIOD_MODE_OPTIONS, display_mode(current.get('mode')))
+    render_select('Mode', f'{prefix}_mode', TIME_PERIOD_MODE_OPTIONS, display_mode(current.get('mode')), 'Select how the time period is defined')
     mode = st.session_state.get(f'{prefix}_mode')
     if mode in {'Established for', 'Extended for'}:
         cols = st.columns(2)
         with cols[0]:
-            render_text('Duration value', f'{prefix}_duration_value', current.get('duration_value'))
+            render_text('Duration value', f'{prefix}_duration_value', current.get('duration_value'), 'Required for this mode. Integer, e.g. 12')
         with cols[1]:
-            render_select('Duration unit', f'{prefix}_duration_unit', DURATION_UNIT_OPTIONS, current.get('duration_unit'))
+            render_select('Duration unit', f'{prefix}_duration_unit', DURATION_UNIT_OPTIONS, current.get('duration_unit'), 'Required for this mode')
     elif mode in {'Established until', 'Extended until'}:
-        render_text('Until date', f'{prefix}_until_date', current.get('until_date'), 'YYYY-MM-DD or DD/MM/YYYY')
+        render_text('Until date', f'{prefix}_until_date', current.get('until_date'), 'Required for this mode. YYYYMMDD or YYYY-MM-DD e.g. 20180630')
 
 
 
@@ -223,9 +223,9 @@ def render_sanctions(record: dict[str, Any]) -> None:
         st.caption('No blocks')
     for idx, block in enumerate(record['sanctions']):
         with st.expander(f'Sanctions #{idx + 1}', expanded=True):
-            render_checkbox('Modified resolution', f'editor_sanctions_{idx}_modified_enabled', block.get('modified_resolution', {}).get('enabled', False))
+            render_checkbox('Modified resolution', f'editor_sanctions_{idx}_modified_enabled', block.get('modified_resolution', {}).get('enabled', False), 'Check if this modifies an existing resolution')
             if st.session_state.get(f'editor_sanctions_{idx}_modified_enabled'):
-                render_text('Modified resolution number', f'editor_sanctions_{idx}_modified_resolution_number', block.get('modified_resolution', {}).get('resolution_number'))
+                render_text('Modified resolution number', f'editor_sanctions_{idx}_modified_resolution_number', block.get('modified_resolution', {}).get('resolution_number'), 'Required when checked. Integer, e.g. 2374')
             render_multiselect('Items regulated (inbound)', f'editor_sanctions_{idx}_items_regulated_inbound', ITEMS_REGULATED_INBOUND_OPTIONS, block.get('items_regulated_inbound', []))
             render_multiselect('Items regulated (outbound)', f'editor_sanctions_{idx}_items_regulated_outbound', ITEMS_REGULATED_OUTBOUND_OPTIONS, block.get('items_regulated_outbound', []))
             render_multiselect('Items regulated (domestic)', f'editor_sanctions_{idx}_items_regulated_domestic', ITEMS_REGULATED_DOMESTIC_OPTIONS, block.get('items_regulated_domestic', []))
@@ -272,19 +272,19 @@ def render_un_peace_operations(record: dict[str, Any]) -> None:
             st.markdown('**Deployed personnel levels**')
             cols = st.columns(4)
             with cols[0]:
-                render_text('Military', f'editor_un_peace_{idx}_military', block.get('deployed_personnel_levels', {}).get('military'))
+                render_text('Military', f'editor_un_peace_{idx}_military', block.get('deployed_personnel_levels', {}).get('military'), 'Integer, e.g. 13289')
             with cols[1]:
-                render_text('Police', f'editor_un_peace_{idx}_police', block.get('deployed_personnel_levels', {}).get('police'))
+                render_text('Police', f'editor_un_peace_{idx}_police', block.get('deployed_personnel_levels', {}).get('police'), 'Integer, e.g. 1920')
             with cols[2]:
-                render_text('Civilian', f'editor_un_peace_{idx}_civilian', block.get('deployed_personnel_levels', {}).get('civilian'))
+                render_text('Civilian', f'editor_un_peace_{idx}_civilian', block.get('deployed_personnel_levels', {}).get('civilian'), 'Integer')
             with cols[3]:
-                render_text('Other', f'editor_un_peace_{idx}_other', block.get('deployed_personnel_levels', {}).get('other'))
+                render_text('Other', f'editor_un_peace_{idx}_other', block.get('deployed_personnel_levels', {}).get('other'), 'Integer')
             render_text('Description', f'editor_un_peace_{idx}_description', block.get('description'))
             render_select('Change in authorized strength', f'editor_un_peace_{idx}_change_in_authorized_strength', AUTHORIZED_STRENGTH_CHANGE_OPTIONS, block.get('change_in_authorized_strength'))
             render_multiselect('Collaboration', f'editor_un_peace_{idx}_collaboration', PKO_COLLABORATION_OPTIONS, block.get('collaboration', []))
             render_select('Inter-mission loan/transfer', f'editor_un_peace_{idx}_transfer_direction', INTER_MISSION_TRANSFER_DIRECTION_OPTIONS, display_direction(block.get('inter_mission_loan_transfer', {}).get('direction')))
             if st.session_state.get(f'editor_un_peace_{idx}_transfer_direction'):
-                render_text('Transfer target', f'editor_un_peace_{idx}_transfer_target', block.get('inter_mission_loan_transfer', {}).get('target'))
+                render_text('Transfer target', f'editor_un_peace_{idx}_transfer_target', block.get('inter_mission_loan_transfer', {}).get('target'), 'Required when direction is selected')
             render_checkbox('Authorization level (all necessary measures)', f'editor_un_peace_{idx}_authorization_level', block.get('authorization_level_all_necessary_measures', False))
             render_multiselect('Mandate', f'editor_un_peace_{idx}_mandate', PKO_MANDATE_OPTIONS, block.get('mandate', []))
             if render_remove_button('Remove this UN peace operations block', f'remove_un_peace_block_{idx}'):
@@ -315,13 +315,13 @@ def render_non_un_operations(record: dict[str, Any]) -> None:
             st.markdown('**Deployed personnel levels**')
             cols = st.columns(4)
             with cols[0]:
-                render_text('Military', f'editor_non_un_{idx}_military', block.get('deployed_personnel_levels', {}).get('military'))
+                render_text('Military', f'editor_non_un_{idx}_military', block.get('deployed_personnel_levels', {}).get('military'), 'Integer')
             with cols[1]:
-                render_text('Police', f'editor_non_un_{idx}_police', block.get('deployed_personnel_levels', {}).get('police'))
+                render_text('Police', f'editor_non_un_{idx}_police', block.get('deployed_personnel_levels', {}).get('police'), 'Integer')
             with cols[2]:
-                render_text('Civilian', f'editor_non_un_{idx}_civilian', block.get('deployed_personnel_levels', {}).get('civilian'))
+                render_text('Civilian', f'editor_non_un_{idx}_civilian', block.get('deployed_personnel_levels', {}).get('civilian'), 'Integer')
             with cols[3]:
-                render_text('Other', f'editor_non_un_{idx}_other', block.get('deployed_personnel_levels', {}).get('other'))
+                render_text('Other', f'editor_non_un_{idx}_other', block.get('deployed_personnel_levels', {}).get('other'), 'Integer')
             render_text('Description', f'editor_non_un_{idx}_description', block.get('description'))
             render_select('Change in authorized strength', f'editor_non_un_{idx}_change_in_authorized_strength', AUTHORIZED_STRENGTH_CHANGE_OPTIONS, block.get('change_in_authorized_strength'))
             render_multiselect('Collaboration', f'editor_non_un_{idx}_collaboration', NON_UN_COLLABORATION_OPTIONS, block.get('collaboration', []))
