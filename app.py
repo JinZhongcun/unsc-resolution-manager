@@ -671,12 +671,17 @@ def main() -> None:
     elif active_view == TAB_EDITOR:
         if st.session_state.pop('save_success', False):
             st.success('Record saved successfully.')
-        editor_top = st.columns([1, 1, 3])
+        editor_top = st.columns([1, 1, 1, 2])
         with editor_top[0]:
             st.button('New', key='new_from_editor', on_click=_switch_to_editor, args=(default_record(),))
         with editor_top[1]:
             if 'current_record' in st.session_state and st.button('Reload'):
                 load_record_into_editor(st.session_state.current_record)
+                st.rerun()
+        with editor_top[2]:
+            if 'current_record' in st.session_state and st.button('Cancel'):
+                clear_editor_widget_state()
+                del st.session_state['current_record']
                 st.rerun()
 
         if 'current_record' not in st.session_state:
