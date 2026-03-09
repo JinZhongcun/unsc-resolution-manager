@@ -476,6 +476,20 @@ def materialize_current_record() -> dict[str, Any]:
 
 
 
+FILTER_KEYS = ['filter_resolution', 'filter_year', 'filter_geo', 'filter_category', 'filter_tag']
+
+
+def _clear_filters() -> None:
+    for key in FILTER_KEYS:
+        if key in st.session_state:
+            del st.session_state[key]
+    st.session_state['filter_applied'] = False
+
+
+def _apply_filters() -> None:
+    st.session_state['filter_applied'] = True
+
+
 def run_filters(public_records: list[dict[str, Any]]) -> list[dict[str, Any]]:
     resolution_filter = st.text_input('Resolution number', key='filter_resolution')
     filter_cols = st.columns(4)
@@ -487,6 +501,15 @@ def run_filters(public_records: list[dict[str, Any]]) -> list[dict[str, Any]]:
     category_filter = filter_cols[2].multiselect('Category', category_options, key='filter_category')
     tag_options = sorted({tag for rec in public_records for tag in rec.get('tag_filters', [])})
     tag_filter = filter_cols[3].multiselect('Tag', tag_options, key='filter_tag')
+
+    btn_cols = st.columns([1, 1, 4])
+    with btn_cols[0]:
+        st.button('Search', key='filter_search', on_click=_apply_filters, type='primary')
+    with btn_cols[1]:
+        st.button('Clear all', key='filter_clear', on_click=_clear_filters)
+
+    if not st.session_state.get('filter_applied', False):
+        return public_records
 
     results = []
     for rec in public_records:
