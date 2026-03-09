@@ -143,6 +143,137 @@ def render_checkbox(label: str, key: str, default: bool = False, help_text: str 
 
 
 
+def render_record_detail(record: dict[str, Any]) -> None:
+    """Render a record in a human-readable format."""
+    detail = record.get('detail', record)
+    general = detail.get('general', {})
+
+    st.markdown('#### General')
+    info_cols = st.columns(3)
+    info_cols[0].markdown(f"**Resolution:** {general.get('resolution_number', '—')}")
+    info_cols[1].markdown(f"**Date:** {general.get('date', '—')}")
+    info_cols[2].markdown(f"**Meeting:** {general.get('meeting_number') or '—'}")
+    st.markdown(f"**Title:** {general.get('resolution_title', '—')}")
+    url = general.get('un_document_url', '')
+    if url:
+        st.markdown(f"**URL:** [{url}]({url})")
+    geo = general.get('geographical_locations', [])
+    if geo:
+        st.markdown(f"**Geographical locations:** {', '.join(geo)}")
+    threat = general.get('threat_level')
+    if threat:
+        st.markdown(f"**Threat level:** {threat}")
+    charter = general.get('charter_invoked', [])
+    if charter:
+        st.markdown(f"**Charter invoked:** {', '.join(charter)}")
+    for ref_key, ref_label in [('references_resolutions', 'References (resolutions)'), ('references_prst', 'References (PRST)'), ('references_other', 'References (other)')]:
+        refs = general.get(ref_key, [])
+        if refs:
+            st.markdown(f"**{ref_label}:** {', '.join(str(r) for r in refs)}")
+    referrals = general.get('referrals', '')
+    if referrals:
+        st.markdown(f"**Referrals:** {referrals}")
+
+    for idx, blk in enumerate(detail.get('sanctions', []), 1):
+        st.markdown(f'#### Sanctions #{idx}')
+        mod = blk.get('modified_resolution', {})
+        if mod.get('enabled'):
+            st.markdown(f"**Modified resolution:** {mod.get('resolution_number', '—')}")
+        for items_key, items_label in [('items_regulated_inbound', 'Inbound'), ('items_regulated_outbound', 'Outbound'), ('items_regulated_domestic', 'Domestic')]:
+            items = blk.get(items_key, [])
+            if items:
+                st.markdown(f"**Items regulated ({items_label}):** {', '.join(items)}")
+        exc = blk.get('exceptions', [])
+        if exc:
+            st.markdown(f"**Exceptions:** {', '.join(exc)}")
+        targets = []
+        if blk.get('target_comprehensive'):
+            targets.append('Comprehensive')
+        if blk.get('target_region'):
+            targets.append(f"Region: {blk['target_region']}")
+        if blk.get('target_state'):
+            targets.append(f"State: {', '.join(blk['target_state'])}")
+        if blk.get('target_non_state'):
+            targets.append(f"Non-state: {blk['target_non_state']}")
+        if blk.get('target_entities_business'):
+            targets.append(f"Entities: {blk['target_entities_business']}")
+        if blk.get('target_individual'):
+            targets.append(f"Individual: {blk['target_individual']}")
+        if targets:
+            st.markdown(f"**Target:** {' | '.join(targets)}")
+        reason = blk.get('reason', [])
+        if reason:
+            st.markdown(f"**Reason:** {', '.join(reason)}")
+        status_parts = []
+        if blk.get('sanctions_status'):
+            status_parts.append(blk['sanctions_status'])
+        if blk.get('sanctions_change'):
+            status_parts.append(blk['sanctions_change'])
+        if status_parts:
+            st.markdown(f"**Status:** {' / '.join(status_parts)}")
+        tp = blk.get('sanctions_time_period', {})
+        if tp.get('mode'):
+            tp_str = tp['mode']
+            if tp.get('duration_value'):
+                tp_str += f" {tp['duration_value']} {tp.get('duration_unit', '')}"
+            if tp.get('until_date'):
+                tp_str += f" {tp['until_date']}"
+            st.markdown(f"**Time period:** {tp_str}")
+
+    for idx, blk in enumerate(detail.get('un_peace_operations', []), 1):
+        st.markdown(f'#### UN Peace Operation #{idx}')
+        for field, label in [('operation_type', 'Type'), ('mission_name', 'Mission'), ('mission_activity', 'Activity'), ('mission_activation_termination', 'Status')]:
+            val = blk.get(field)
+            if val:
+                st.markdown(f"**{label}:** {val}")
+        personnel = blk.get('deployed_personnel_levels', {})
+        parts = [f"{k}: {v}" for k, v in personnel.items() if v not in (None, '', 0)]
+        if parts:
+            st.markdown(f"**Personnel:** {' | '.join(parts)}")
+        if blk.get('change_in_authorized_strength'):
+            st.markdown(f"**Strength change:** {blk['change_in_authorized_strength']}")
+        if blk.get('authorization_level_all_necessary_measures'):
+            st.markdown('**Authorization level:** All necessary measures')
+        mandate = blk.get('mandate', [])
+        if mandate:
+            st.markdown(f"**Mandate:** {', '.join(mandate)}")
+
+    for idx, blk in enumerate(detail.get('non_un_operations_enforcement_actions', []), 1):
+        st.markdown(f'#### Non-UN Operation #{idx}')
+        for field, label in [('mission_name', 'Mission'), ('authorization_action', 'Action'), ('authorization_activation_termination', 'Status')]:
+            val = blk.get(field)
+            if val:
+                st.markdown(f"**{label}:** {val}")
+        personnel = blk.get('deployed_personnel_levels', {})
+        parts = [f"{k}: {v}" for k, v in personnel.items() if v not in (None, '', 0)]
+        if parts:
+            st.markdown(f"**Personnel:** {' | '.join(parts)}")
+
+    tribunals = detail.get('criminal_tribunals', {}).get('tribunal_name', [])
+    if tribunals:
+        st.markdown(f"#### Criminal Tribunals\n**{', '.join(tribunals)}**")
+    organs = detail.get('other_subsidiary_organs', {}).get('subsidiary_organ_type', [])
+    if organs:
+        st.markdown(f"#### Other Subsidiary Organs\n**{', '.join(organs)}**")
+    theme = detail.get('thematic_resolutions', {}).get('theme', '')
+    if theme:
+        st.markdown(f"#### Thematic Resolutions\n**Theme:** {theme}")
+    members = detail.get('membership', {}).get('new_member_name', [])
+    if members:
+        st.markdown(f"#### Membership\n**New members:** {', '.join(members)}")
+    appt = detail.get('appointment_related', {}).get('organization', [])
+    if appt:
+        st.markdown(f"#### Appointment Related\n**Organization:** {', '.join(appt)}")
+    note = detail.get('other', {}).get('note', '')
+    annex = detail.get('other', {}).get('annex_attached', False)
+    if note or annex:
+        st.markdown('#### Other')
+        if note:
+            st.markdown(f"**Note:** {note}")
+        if annex:
+            st.markdown('**Annex attached:** Yes')
+
+
 def render_remove_button(label: str, key: str) -> bool:
     cols = st.columns([4, 1])
     with cols[1]:
@@ -662,17 +793,40 @@ def main() -> None:
         if not filtered_public:
             st.info('No matching records.')
         else:
+            open_id = st.session_state.get('list_open_id')
             for row_idx, rec in enumerate(filtered_public):
+                rec_id = rec['record_id']
                 res_num = rec.get('resolution_number', '')
                 date = rec.get('date', '')
                 title = rec.get('resolution_title', '') or ''
                 geo = ', '.join(rec.get('geographical_locations', []))
-                label = f"**{res_num}** | {date} | {title}"
-                if geo:
-                    label += f" | {geo}"
-                with st.expander(label, expanded=False):
-                    st.button('Edit', key=f'edit_row_{row_idx}', on_click=_switch_to_editor, args=(record_by_id[rec['record_id']],))
-                    st.json(rec.get('detail', rec))
+                row_cols = st.columns([1.2, 1, 3, 2, 0.6, 0.6])
+                with row_cols[0]:
+                    st.text(str(res_num))
+                with row_cols[1]:
+                    st.text(date)
+                with row_cols[2]:
+                    st.text(title)
+                with row_cols[3]:
+                    st.text(geo)
+                with row_cols[4]:
+                    if open_id == rec_id:
+                        if st.button('Close', key=f'close_row_{row_idx}'):
+                            st.session_state['list_open_id'] = None
+                            st.rerun()
+                    else:
+                        if st.button('View', key=f'view_row_{row_idx}'):
+                            st.session_state['list_open_id'] = rec_id
+                            st.rerun()
+                with row_cols[5]:
+                    st.button('Edit', key=f'edit_row_{row_idx}', on_click=_switch_to_editor, args=(record_by_id[rec_id],))
+                if open_id == rec_id:
+                    st.divider()
+                    render_record_detail(rec)
+                    if st.button('Close', key=f'close_row_bottom_{row_idx}'):
+                        st.session_state['list_open_id'] = None
+                        st.rerun()
+                    st.divider()
 
     # ── Editor view ──
     elif active_view == TAB_EDITOR:
