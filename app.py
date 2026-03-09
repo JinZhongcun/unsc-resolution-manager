@@ -646,6 +646,8 @@ def main() -> None:
 
     # ── Editor view ──
     elif active_view == TAB_EDITOR:
+        if st.session_state.pop('save_success', False):
+            st.success('Record saved successfully.')
         editor_top = st.columns([1, 1, 3])
         with editor_top[0]:
             st.button('New', key='new_from_editor', on_click=_switch_to_editor, args=(default_record(),))
@@ -688,9 +690,10 @@ def main() -> None:
                             st.error('Save failed. Please check file permissions and destination.')
                             st.code(str(exc))
                         else:
-                            st.session_state.current_record = normalized
                             clear_editor_widget_state()
-                            st.success(f'Saved. records: {RECORDS_PATH.name}, public: {PUBLIC_RECORDS_PATH.name}')
+                            if 'current_record' in st.session_state:
+                                del st.session_state['current_record']
+                            st.session_state['save_success'] = True
                             st.rerun()
 
 
