@@ -1,1 +1,7060 @@
-[]
+[
+  {
+    "record_id": "7ffca15f-3892-4be6-81a6-976a3a38f253",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/2374(2017)",
+      "resolution_number": 2374,
+      "date": "2017-09-05",
+      "meeting_number": 1,
+      "geographical_locations": [
+        "Afghanistan",
+        "Andorra",
+        "Åland Islands",
+        "Albania",
+        "American Samoa",
+        "Angola",
+        "Anguilla",
+        "Antigua and Barbuda"
+      ],
+      "resolution_title": "The situation in Mali",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": null,
+      "charter_invoked": [],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    }
+  },
+  {
+    "record_id": "7c42868a-1a5a-4111-9e13-95d6264e00f4",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/2728(2024)",
+      "resolution_number": 2728,
+      "date": "2024-03-25",
+      "meeting_number": 9567,
+      "geographical_locations": [
+        "Palestine"
+      ],
+      "resolution_title": "The situation in the Middle East, including the Palestinian question",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": null,
+      "charter_invoked": [],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    }
+  },
+  {
+    "record_id": "7e7f5cbd-b2ef-4c90-9fdb-1e8e1f4adddf",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/2686(2023)",
+      "resolution_number": 2686,
+      "date": "2023-06-12",
+      "meeting_number": 9347,
+      "geographical_locations": [
+        "Sudan"
+      ],
+      "resolution_title": "The situation in Sudan",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Threat to Peace",
+      "charter_invoked": [
+        "Chapter VII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Military goods/services"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Sudan"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Activation",
+        "sanctions_change": "Sanctions modified",
+        "sanctions_time_period": {
+          "mode": "extended_for",
+          "duration_value": 12,
+          "duration_unit": "months",
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    }
+  },
+  {
+    "record_id": "992bd171-6941-4012-a924-f796dc18ca2c",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/2663(2022)",
+      "resolution_number": 2663,
+      "date": "2022-11-17",
+      "meeting_number": 9202,
+      "geographical_locations": [
+        "Haiti"
+      ],
+      "resolution_title": "The question concerning Haiti",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Threat to Peace",
+      "charter_invoked": [
+        "Chapter VII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Military goods/services"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": true,
+        "target_region": "",
+        "target_state": [],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Activation",
+        "sanctions_change": "Sanctions started",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    }
+  },
+  {
+    "record_id": "255f31fc-5f03-46a7-b6c6-67672208726f",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/2719(2023)",
+      "resolution_number": 2719,
+      "date": "2023-12-21",
+      "meeting_number": 9510,
+      "geographical_locations": [],
+      "resolution_title": "United Nations peacekeeping operations",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": null,
+      "charter_invoked": [],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [
+      {
+        "operation_type": "Peacekeeping Mission",
+        "mission_name": null,
+        "mission_activity": "Mission modified",
+        "authorization_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        },
+        "mission_activation_termination": "Activation",
+        "deployed_personnel_levels": {
+          "military": 13289,
+          "police": 1920,
+          "civilian": null,
+          "other": null
+        },
+        "description": "",
+        "change_in_authorized_strength": null,
+        "collaboration": [],
+        "inter_mission_loan_transfer": {
+          "direction": null,
+          "target": ""
+        },
+        "authorization_level_all_necessary_measures": true,
+        "mandate": [
+          "Protection of UN Personnel, institutions and civilians (freedom of movement, etc.)"
+        ]
+      }
+    ],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    }
+  },
+  {
+    "record_id": "1af6eb7f-e9f7-4ab8-8ab4-2958ec8cd9a0",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/2722(2024)",
+      "resolution_number": 2722,
+      "date": "2024-01-10",
+      "meeting_number": 9533,
+      "geographical_locations": [
+        "Yemen"
+      ],
+      "resolution_title": "The situation in Yemen",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Threat to Peace",
+      "charter_invoked": [
+        "Chapter VII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    }
+  },
+  {
+    "record_id": "684e151f-cbe6-4b9b-83e4-cf9b1b221e94",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1000(2010)",
+      "resolution_number": 1000,
+      "date": "2010-09-20",
+      "meeting_number": 3000,
+      "geographical_locations": [
+        "Cote d'Ivoire"
+      ],
+      "resolution_title": "Reports of the Secretary-General on Cote d'Ivoire",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Breach of Peace",
+      "charter_invoked": [
+        "Chapter VI"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "5298788f-457f-4daa-aa91-13ad99c30796",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1001(1995)",
+      "resolution_number": 1001,
+      "date": "1995-12-02",
+      "meeting_number": 3001,
+      "geographical_locations": [
+        "Ethiopia"
+      ],
+      "resolution_title": "Reports of the Secretary-General on Ethiopia",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Threat to Peace",
+      "charter_invoked": [],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "bac2126e-44d3-450b-a4b3-bd9637ab475b",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1002(1994)",
+      "resolution_number": 1002,
+      "date": "1994-03-25",
+      "meeting_number": 3002,
+      "geographical_locations": [
+        "Cameroon"
+      ],
+      "resolution_title": "The question concerning Cameroon",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": null,
+      "charter_invoked": [
+        "Chapter VII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Diamonds",
+          "Travel"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Cameroon"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Termination",
+        "sanctions_change": "Sanctions started",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [
+      {
+        "operation_type": "Hybrid Mission",
+        "mission_name": null,
+        "mission_activity": "Mission modified",
+        "authorization_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        },
+        "mission_activation_termination": "Activation",
+        "deployed_personnel_levels": {
+          "military": 9836,
+          "police": 1675,
+          "civilian": null,
+          "other": null
+        },
+        "description": "",
+        "change_in_authorized_strength": null,
+        "collaboration": [],
+        "inter_mission_loan_transfer": {
+          "direction": null,
+          "target": ""
+        },
+        "authorization_level_all_necessary_measures": true,
+        "mandate": [
+          "Protection of UN Personnel, institutions and civilians (freedom of movement, etc.)"
+        ]
+      }
+    ],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "6961acf7-bb51-476e-ab6e-b979b7a09adb",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1003(1999)",
+      "resolution_number": 1003,
+      "date": "1999-04-17",
+      "meeting_number": 3003,
+      "geographical_locations": [
+        "Central African Republic"
+      ],
+      "resolution_title": "Threats to international peace and security caused by Central African Republic",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Breach of Peace",
+      "charter_invoked": [
+        "Chapter VII",
+        "Chapter VIII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "aedb676a-0cdf-496e-a868-43d3bb48d93c",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1004(1991)",
+      "resolution_number": 1004,
+      "date": "1991-12-11",
+      "meeting_number": 3004,
+      "geographical_locations": [
+        "Bosnia and Herzegovina"
+      ],
+      "resolution_title": "The question concerning Bosnia and Herzegovina",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Act of Aggression",
+      "charter_invoked": [
+        "Chapter VII",
+        "Chapter VIII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Petroleum related"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Bosnia and Herzegovina"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Termination",
+        "sanctions_change": "Sanctions terminated",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "f5481cb1-705d-40bb-ad0d-bf177451cb73",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1005(2005)",
+      "resolution_number": 1005,
+      "date": "2005-01-28",
+      "meeting_number": 3005,
+      "geographical_locations": [
+        "Burundi"
+      ],
+      "resolution_title": "Peace and security in Burundi",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Act of Aggression",
+      "charter_invoked": [
+        "Chapter VII",
+        "Chapter VIII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "69611d94-9d61-4e84-b0e8-4c70ecc934b7",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1006(2014)",
+      "resolution_number": 1006,
+      "date": "2014-04-13",
+      "meeting_number": 3006,
+      "geographical_locations": [
+        "Nigeria"
+      ],
+      "resolution_title": "Threats to international peace and security caused by Nigeria",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Threat to Peace",
+      "charter_invoked": [
+        "Chapter VII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Travel",
+          "Military goods/services",
+          "Assets"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Nigeria"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Suspension",
+        "sanctions_change": "Sanctions modified",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "1a1ac97d-2b3e-4dfd-8c3c-9a3b234c58d1",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1007(2007)",
+      "resolution_number": 1007,
+      "date": "2007-12-24",
+      "meeting_number": 3007,
+      "geographical_locations": [
+        "Myanmar"
+      ],
+      "resolution_title": "Threats to international peace and security caused by Myanmar",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Breach of Peace",
+      "charter_invoked": [
+        "Chapter VII",
+        "Chapter VIII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Travel",
+          "Military goods/services",
+          "Assets"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Myanmar"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Termination",
+        "sanctions_change": "Sanctions started",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "7fa18b02-781f-4d22-8769-bab33ffa91d4",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1008(2020)",
+      "resolution_number": 1008,
+      "date": "2020-08-07",
+      "meeting_number": 3008,
+      "geographical_locations": [
+        "Somalia"
+      ],
+      "resolution_title": "The question concerning Somalia",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Threat to Peace",
+      "charter_invoked": [
+        "Chapter VII",
+        "Chapter VIII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "01f6140e-4d05-4db3-88d9-8c4ce5cb6c63",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1009(2018)",
+      "resolution_number": 1009,
+      "date": "2018-07-18",
+      "meeting_number": 3009,
+      "geographical_locations": [
+        "Libya"
+      ],
+      "resolution_title": "Threats to international peace and security caused by Libya",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": null,
+      "charter_invoked": [
+        "Chapter VI"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "bc575b73-b9a3-402c-a2a7-c9175e894549",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1010(1995)",
+      "resolution_number": 1010,
+      "date": "1995-09-13",
+      "meeting_number": 3010,
+      "geographical_locations": [
+        "Congo"
+      ],
+      "resolution_title": "Threats to international peace and security caused by Congo",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Threat to Peace",
+      "charter_invoked": [
+        "Chapter VII",
+        "Chapter VIII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "882af570-c8ed-4a34-97b9-d27d45e76fde",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1011(1993)",
+      "resolution_number": 1011,
+      "date": "1993-02-02",
+      "meeting_number": 3011,
+      "geographical_locations": [
+        "Syrian Arab Republic"
+      ],
+      "resolution_title": "The question concerning Syrian Arab Republic",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Threat to Peace",
+      "charter_invoked": [
+        "Chapter VI"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Military goods/services",
+          "Assets",
+          "Travel"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Syrian Arab Republic"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Suspension",
+        "sanctions_change": "Sanctions started",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "d2eb0481-00da-49f0-8d4d-df063af7f391",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1012(2022)",
+      "resolution_number": 1012,
+      "date": "2022-01-31",
+      "meeting_number": 3012,
+      "geographical_locations": [
+        "Cameroon"
+      ],
+      "resolution_title": "The question concerning Cameroon",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Act of Aggression",
+      "charter_invoked": [
+        "Chapter VII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Assets",
+          "Travel",
+          "Military goods/services"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Cameroon"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Termination",
+        "sanctions_change": "Sanctions started",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "04a9408c-f0ed-40f4-9e53-67dc111c5fb7",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1013(2015)",
+      "resolution_number": 1013,
+      "date": "2015-05-30",
+      "meeting_number": 3013,
+      "geographical_locations": [
+        "Myanmar"
+      ],
+      "resolution_title": "Threats to international peace and security caused by Myanmar",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Act of Aggression",
+      "charter_invoked": [
+        "Chapter VII",
+        "Chapter VIII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Assets",
+          "Diamonds",
+          "Petroleum related"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Myanmar"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Activation",
+        "sanctions_change": "Sanctions modified",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "51d7af5e-b711-428d-ae0d-054d44957a11",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1014(2007)",
+      "resolution_number": 1014,
+      "date": "2007-08-16",
+      "meeting_number": 3014,
+      "geographical_locations": [
+        "Democratic Republic of the Congo"
+      ],
+      "resolution_title": "Reports of the Secretary-General on Democratic Republic of the Congo",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Threat to Peace",
+      "charter_invoked": [
+        "Chapter VII",
+        "Chapter VIII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Military goods/services"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Democratic Republic of the Congo"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Activation",
+        "sanctions_change": "Sanctions modified",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "8edbe1b7-f7de-4b2b-969d-50e894b583e6",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1015(2003)",
+      "resolution_number": 1015,
+      "date": "2003-06-04",
+      "meeting_number": 3015,
+      "geographical_locations": [
+        "Colombia"
+      ],
+      "resolution_title": "Peace and security in Colombia",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Act of Aggression",
+      "charter_invoked": [],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "0d374590-f6a0-4c98-9086-6f5826daff6e",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1016(1998)",
+      "resolution_number": 1016,
+      "date": "1998-05-11",
+      "meeting_number": 3016,
+      "geographical_locations": [
+        "Sierra Leone"
+      ],
+      "resolution_title": "The situation in Sierra Leone",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": null,
+      "charter_invoked": [
+        "Chapter VI"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "f49fdeae-f12a-4b4f-905d-197acbe78486",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1017(2022)",
+      "resolution_number": 1017,
+      "date": "2022-04-06",
+      "meeting_number": 3017,
+      "geographical_locations": [
+        "Yemen"
+      ],
+      "resolution_title": "The question concerning Yemen",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": null,
+      "charter_invoked": [
+        "Chapter VI"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "111fe80a-c0a7-41d4-9c51-50f5968fa850",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1018(1998)",
+      "resolution_number": 1018,
+      "date": "1998-05-01",
+      "meeting_number": 3018,
+      "geographical_locations": [
+        "Chad"
+      ],
+      "resolution_title": "Threats to international peace and security caused by Chad",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Threat to Peace",
+      "charter_invoked": [],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "aff4875d-4b7c-4b41-a25c-a37d45f754b8",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1019(2012)",
+      "resolution_number": 1019,
+      "date": "2012-07-18",
+      "meeting_number": 3019,
+      "geographical_locations": [
+        "Bosnia and Herzegovina"
+      ],
+      "resolution_title": "The question concerning Bosnia and Herzegovina",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Threat to Peace",
+      "charter_invoked": [
+        "Chapter VII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "1ef2f037-cc0a-433e-a7c1-bb3bdef27572",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1020(2013)",
+      "resolution_number": 1020,
+      "date": "2013-03-03",
+      "meeting_number": 3020,
+      "geographical_locations": [
+        "Myanmar"
+      ],
+      "resolution_title": "Threats to international peace and security caused by Myanmar",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Threat to Peace",
+      "charter_invoked": [
+        "Chapter VII",
+        "Chapter VIII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Assets",
+          "Diamonds",
+          "Travel"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Myanmar"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Suspension",
+        "sanctions_change": "Sanctions terminated",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "a565365f-0c35-45fd-af51-20f1bad04902",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1021(2007)",
+      "resolution_number": 1021,
+      "date": "2007-04-11",
+      "meeting_number": 3021,
+      "geographical_locations": [
+        "Nepal"
+      ],
+      "resolution_title": "The situation in Nepal",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Threat to Peace",
+      "charter_invoked": [],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "dbdd7081-1b78-468a-b48e-d74046eb3230",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1022(2020)",
+      "resolution_number": 1022,
+      "date": "2020-09-11",
+      "meeting_number": 3022,
+      "geographical_locations": [
+        "Democratic Republic of the Congo"
+      ],
+      "resolution_title": "Peace and security in Democratic Republic of the Congo",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Act of Aggression",
+      "charter_invoked": [
+        "Chapter VI"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [
+      {
+        "operation_type": "Peacekeeping Mission",
+        "mission_name": null,
+        "mission_activity": "Mission started",
+        "authorization_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        },
+        "mission_activation_termination": "Termination",
+        "deployed_personnel_levels": {
+          "military": 9572,
+          "police": 4485,
+          "civilian": null,
+          "other": null
+        },
+        "description": "",
+        "change_in_authorized_strength": null,
+        "collaboration": [],
+        "inter_mission_loan_transfer": {
+          "direction": null,
+          "target": ""
+        },
+        "authorization_level_all_necessary_measures": false,
+        "mandate": [
+          "Governance support/democratic process",
+          "Protection of UN Personnel, institutions and civilians (freedom of movement, etc.)"
+        ]
+      }
+    ],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "0d6080f3-346f-42ac-85f5-5fd694b1e73d",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1023(2003)",
+      "resolution_number": 1023,
+      "date": "2003-07-19",
+      "meeting_number": 3023,
+      "geographical_locations": [
+        "Iraq"
+      ],
+      "resolution_title": "The situation in Iraq",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": null,
+      "charter_invoked": [],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Petroleum related",
+          "Diamonds",
+          "Travel"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Iraq"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Activation",
+        "sanctions_change": "Sanctions modified",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "4f23cb8e-55cf-4436-be53-6b053a85bac7",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1024(2004)",
+      "resolution_number": 1024,
+      "date": "2004-04-21",
+      "meeting_number": 3024,
+      "geographical_locations": [
+        "Liberia"
+      ],
+      "resolution_title": "Reports of the Secretary-General on Liberia",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Act of Aggression",
+      "charter_invoked": [
+        "Chapter VI"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [
+      {
+        "operation_type": "Hybrid Mission",
+        "mission_name": null,
+        "mission_activity": "Mission started",
+        "authorization_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        },
+        "mission_activation_termination": "Termination",
+        "deployed_personnel_levels": {
+          "military": 11998,
+          "police": 1336,
+          "civilian": null,
+          "other": null
+        },
+        "description": "",
+        "change_in_authorized_strength": null,
+        "collaboration": [],
+        "inter_mission_loan_transfer": {
+          "direction": null,
+          "target": ""
+        },
+        "authorization_level_all_necessary_measures": false,
+        "mandate": [
+          "Governance support/democratic process",
+          "Enforcement",
+          "Protection of UN Personnel, institutions and civilians (freedom of movement, etc.)"
+        ]
+      }
+    ],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "7bf58250-ac5c-482c-86ce-3dd31d13e868",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1025(1997)",
+      "resolution_number": 1025,
+      "date": "1997-09-19",
+      "meeting_number": 3025,
+      "geographical_locations": [
+        "Cameroon"
+      ],
+      "resolution_title": "The situation in Cameroon",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Act of Aggression",
+      "charter_invoked": [
+        "Chapter VII",
+        "Chapter VIII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "9ab21ca7-25e3-4b2e-9c74-9637d8bd8909",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1026(2001)",
+      "resolution_number": 1026,
+      "date": "2001-02-05",
+      "meeting_number": 3026,
+      "geographical_locations": [
+        "Myanmar"
+      ],
+      "resolution_title": "The question concerning Myanmar",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Threat to Peace",
+      "charter_invoked": [
+        "Chapter VI"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Military goods/services",
+          "Travel"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Myanmar"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Activation",
+        "sanctions_change": "Sanctions started",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "8fb339d5-acf2-4fe9-b576-4f552a2f7bf2",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1027(2018)",
+      "resolution_number": 1027,
+      "date": "2018-08-03",
+      "meeting_number": 3027,
+      "geographical_locations": [
+        "Ukraine"
+      ],
+      "resolution_title": "The situation in Ukraine",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Breach of Peace",
+      "charter_invoked": [],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Diamonds",
+          "Travel",
+          "Petroleum related"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Ukraine"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Suspension",
+        "sanctions_change": "Sanctions modified",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [
+      {
+        "operation_type": "Peacekeeping Mission",
+        "mission_name": null,
+        "mission_activity": "Mission modified",
+        "authorization_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        },
+        "mission_activation_termination": "Termination",
+        "deployed_personnel_levels": {
+          "military": 19775,
+          "police": 2915,
+          "civilian": null,
+          "other": null
+        },
+        "description": "",
+        "change_in_authorized_strength": null,
+        "collaboration": [],
+        "inter_mission_loan_transfer": {
+          "direction": null,
+          "target": ""
+        },
+        "authorization_level_all_necessary_measures": true,
+        "mandate": [
+          "Support for the implementation of the peace process",
+          "Governance support/democratic process"
+        ]
+      }
+    ],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "ebb6da13-9e7d-4400-80ad-14b7ba497b04",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1028(1995)",
+      "resolution_number": 1028,
+      "date": "1995-01-07",
+      "meeting_number": 3028,
+      "geographical_locations": [
+        "Sierra Leone"
+      ],
+      "resolution_title": "The situation in Sierra Leone",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Act of Aggression",
+      "charter_invoked": [
+        "Chapter VI"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "fd504839-f9d4-4e93-a65a-4a1a7a615e78",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1029(2002)",
+      "resolution_number": 1029,
+      "date": "2002-01-02",
+      "meeting_number": 3029,
+      "geographical_locations": [
+        "Chad"
+      ],
+      "resolution_title": "Reports of the Secretary-General on Chad",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Threat to Peace",
+      "charter_invoked": [],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "3b9f2704-1016-4239-9a1d-8aa536b63b8a",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1030(1998)",
+      "resolution_number": 1030,
+      "date": "1998-03-19",
+      "meeting_number": 3030,
+      "geographical_locations": [
+        "Georgia"
+      ],
+      "resolution_title": "Reports of the Secretary-General on Georgia",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Act of Aggression",
+      "charter_invoked": [
+        "Chapter VII",
+        "Chapter VIII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "1bd0ab6c-dced-4ccc-852b-12ed64c03559",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1031(2021)",
+      "resolution_number": 1031,
+      "date": "2021-03-12",
+      "meeting_number": 3031,
+      "geographical_locations": [
+        "Cote d'Ivoire"
+      ],
+      "resolution_title": "Reports of the Secretary-General on Cote d'Ivoire",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": null,
+      "charter_invoked": [],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Travel",
+          "Diamonds",
+          "Petroleum related"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Cote d'Ivoire"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Termination",
+        "sanctions_change": "Sanctions started",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "d4c4a62a-0b32-4dfe-bdfc-2566f0653c72",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1032(2021)",
+      "resolution_number": 1032,
+      "date": "2021-07-30",
+      "meeting_number": 3032,
+      "geographical_locations": [
+        "Bosnia and Herzegovina"
+      ],
+      "resolution_title": "The question concerning Bosnia and Herzegovina",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Breach of Peace",
+      "charter_invoked": [
+        "Chapter VI"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "c058cc23-5826-44ef-96d3-4b4564597a23",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1033(2002)",
+      "resolution_number": 1033,
+      "date": "2002-10-07",
+      "meeting_number": 3033,
+      "geographical_locations": [
+        "Libya"
+      ],
+      "resolution_title": "Reports of the Secretary-General on Libya",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Act of Aggression",
+      "charter_invoked": [
+        "Chapter VII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Diamonds",
+          "Travel",
+          "Petroleum related"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Libya"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Activation",
+        "sanctions_change": "Sanctions terminated",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "4299f9d9-fd82-4390-b0ed-4796ca28d9c2",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1034(2005)",
+      "resolution_number": 1034,
+      "date": "2005-08-23",
+      "meeting_number": 3034,
+      "geographical_locations": [
+        "Nigeria"
+      ],
+      "resolution_title": "The situation in Nigeria",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Threat to Peace",
+      "charter_invoked": [],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Travel",
+          "Petroleum related",
+          "Military goods/services"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Nigeria"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Termination",
+        "sanctions_change": "Sanctions terminated",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "8616e8b1-21c9-4bd5-bfec-7a43d37e69ce",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1035(2013)",
+      "resolution_number": 1035,
+      "date": "2013-01-28",
+      "meeting_number": 3035,
+      "geographical_locations": [
+        "Congo"
+      ],
+      "resolution_title": "Threats to international peace and security caused by Congo",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Breach of Peace",
+      "charter_invoked": [
+        "Chapter VII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Diamonds"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Congo"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Suspension",
+        "sanctions_change": "Sanctions modified",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "83cc01e5-6d23-42a4-acfd-26a6c8c6c24a",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1036(1997)",
+      "resolution_number": 1036,
+      "date": "1997-09-10",
+      "meeting_number": 3036,
+      "geographical_locations": [
+        "Ukraine"
+      ],
+      "resolution_title": "The situation in Ukraine",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Threat to Peace",
+      "charter_invoked": [
+        "Chapter VII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "8b6f375a-db57-4dac-9e37-ee09fb1ea4aa",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1037(2002)",
+      "resolution_number": 1037,
+      "date": "2002-07-20",
+      "meeting_number": 3037,
+      "geographical_locations": [
+        "Timor-Leste"
+      ],
+      "resolution_title": "Peace and security in Timor-Leste",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Act of Aggression",
+      "charter_invoked": [
+        "Chapter VII",
+        "Chapter VIII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Diamonds",
+          "Travel",
+          "Assets"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Timor-Leste"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Suspension",
+        "sanctions_change": "Sanctions terminated",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [
+      {
+        "operation_type": "Hybrid Mission",
+        "mission_name": null,
+        "mission_activity": "Mission terminated",
+        "authorization_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        },
+        "mission_activation_termination": "Termination",
+        "deployed_personnel_levels": {
+          "military": 13615,
+          "police": 145,
+          "civilian": null,
+          "other": null
+        },
+        "description": "",
+        "change_in_authorized_strength": null,
+        "collaboration": [],
+        "inter_mission_loan_transfer": {
+          "direction": null,
+          "target": ""
+        },
+        "authorization_level_all_necessary_measures": true,
+        "mandate": [
+          "Protection of UN Personnel, institutions and civilians (freedom of movement, etc.)"
+        ]
+      }
+    ],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "3d5e5b28-6251-4955-beb6-798337e10c34",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1038(2011)",
+      "resolution_number": 1038,
+      "date": "2011-12-22",
+      "meeting_number": 3038,
+      "geographical_locations": [
+        "Ethiopia"
+      ],
+      "resolution_title": "Threats to international peace and security caused by Ethiopia",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Breach of Peace",
+      "charter_invoked": [
+        "Chapter VII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "d5cc49a0-c993-43fa-ad22-f61085242f58",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1039(1999)",
+      "resolution_number": 1039,
+      "date": "1999-03-29",
+      "meeting_number": 3039,
+      "geographical_locations": [
+        "Zimbabwe"
+      ],
+      "resolution_title": "Peace and security in Zimbabwe",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Threat to Peace",
+      "charter_invoked": [
+        "Chapter VI"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Assets",
+          "Diamonds",
+          "Travel"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Zimbabwe"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Activation",
+        "sanctions_change": "Sanctions started",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [
+      {
+        "operation_type": "Special Political Mission",
+        "mission_name": null,
+        "mission_activity": "Mission modified",
+        "authorization_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        },
+        "mission_activation_termination": "Activation",
+        "deployed_personnel_levels": {
+          "military": 8560,
+          "police": 2956,
+          "civilian": null,
+          "other": null
+        },
+        "description": "",
+        "change_in_authorized_strength": null,
+        "collaboration": [],
+        "inter_mission_loan_transfer": {
+          "direction": null,
+          "target": ""
+        },
+        "authorization_level_all_necessary_measures": false,
+        "mandate": [
+          "Governance support/democratic process",
+          "Protection of UN Personnel, institutions and civilians (freedom of movement, etc.)"
+        ]
+      }
+    ],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "a1f22178-92c9-423c-a0e3-72de5b06f3fa",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1040(2022)",
+      "resolution_number": 1040,
+      "date": "2022-06-27",
+      "meeting_number": 3040,
+      "geographical_locations": [
+        "Mozambique"
+      ],
+      "resolution_title": "The situation in Mozambique",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Breach of Peace",
+      "charter_invoked": [
+        "Chapter VII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Military goods/services",
+          "Diamonds",
+          "Travel"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Mozambique"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Termination",
+        "sanctions_change": "Sanctions started",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [
+      {
+        "operation_type": "Hybrid Mission",
+        "mission_name": null,
+        "mission_activity": "Mission started",
+        "authorization_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        },
+        "mission_activation_termination": "Activation",
+        "deployed_personnel_levels": {
+          "military": 4070,
+          "police": 4489,
+          "civilian": null,
+          "other": null
+        },
+        "description": "",
+        "change_in_authorized_strength": null,
+        "collaboration": [],
+        "inter_mission_loan_transfer": {
+          "direction": null,
+          "target": ""
+        },
+        "authorization_level_all_necessary_measures": false,
+        "mandate": [
+          "Law and order/Justice",
+          "Enforcement"
+        ]
+      }
+    ],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "51f0efce-9e64-42d6-a230-cd99ac7adcfc",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1041(2006)",
+      "resolution_number": 1041,
+      "date": "2006-01-12",
+      "meeting_number": 3041,
+      "geographical_locations": [
+        "Senegal"
+      ],
+      "resolution_title": "Reports of the Secretary-General on Senegal",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Breach of Peace",
+      "charter_invoked": [
+        "Chapter VII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Assets",
+          "Travel"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Senegal"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Activation",
+        "sanctions_change": "Sanctions started",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "95cf0a21-c8c4-434a-bc71-f902790e9cba",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1042(2002)",
+      "resolution_number": 1042,
+      "date": "2002-07-20",
+      "meeting_number": 3042,
+      "geographical_locations": [
+        "Palestine"
+      ],
+      "resolution_title": "Threats to international peace and security caused by Palestine",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Act of Aggression",
+      "charter_invoked": [
+        "Chapter VII",
+        "Chapter VIII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Petroleum related",
+          "Diamonds",
+          "Assets"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Palestine"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Termination",
+        "sanctions_change": "Sanctions modified",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [
+      {
+        "operation_type": "Hybrid Mission",
+        "mission_name": null,
+        "mission_activity": "Mission modified",
+        "authorization_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        },
+        "mission_activation_termination": "Termination",
+        "deployed_personnel_levels": {
+          "military": 10304,
+          "police": 241,
+          "civilian": null,
+          "other": null
+        },
+        "description": "",
+        "change_in_authorized_strength": null,
+        "collaboration": [],
+        "inter_mission_loan_transfer": {
+          "direction": null,
+          "target": ""
+        },
+        "authorization_level_all_necessary_measures": true,
+        "mandate": [
+          "Governance support/democratic process"
+        ]
+      }
+    ],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "bca7c5e4-c2b8-4d9d-a9d9-d659c98d3513",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1043(2001)",
+      "resolution_number": 1043,
+      "date": "2001-12-30",
+      "meeting_number": 3043,
+      "geographical_locations": [
+        "Palestine"
+      ],
+      "resolution_title": "The situation in Palestine",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Breach of Peace",
+      "charter_invoked": [
+        "Chapter VII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Travel",
+          "Petroleum related",
+          "Assets"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Palestine"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Suspension",
+        "sanctions_change": "Sanctions started",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [
+      {
+        "operation_type": "Hybrid Mission",
+        "mission_name": null,
+        "mission_activity": "Mission terminated",
+        "authorization_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        },
+        "mission_activation_termination": "Activation",
+        "deployed_personnel_levels": {
+          "military": 5179,
+          "police": 985,
+          "civilian": null,
+          "other": null
+        },
+        "description": "",
+        "change_in_authorized_strength": null,
+        "collaboration": [],
+        "inter_mission_loan_transfer": {
+          "direction": null,
+          "target": ""
+        },
+        "authorization_level_all_necessary_measures": false,
+        "mandate": [
+          "Law and order/Justice"
+        ]
+      }
+    ],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "dca906e9-5675-4cea-b809-f40dcaf70073",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1044(2016)",
+      "resolution_number": 1044,
+      "date": "2016-04-08",
+      "meeting_number": 3044,
+      "geographical_locations": [
+        "Congo"
+      ],
+      "resolution_title": "Reports of the Secretary-General on Congo",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Threat to Peace",
+      "charter_invoked": [
+        "Chapter VII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Assets",
+          "Diamonds"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Congo"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Suspension",
+        "sanctions_change": "Sanctions modified",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "233b55af-b385-49cd-8a95-99b06397d8c5",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1045(2014)",
+      "resolution_number": 1045,
+      "date": "2014-10-17",
+      "meeting_number": 3045,
+      "geographical_locations": [
+        "Burundi"
+      ],
+      "resolution_title": "Reports of the Secretary-General on Burundi",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Threat to Peace",
+      "charter_invoked": [
+        "Chapter VII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Petroleum related"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Burundi"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Activation",
+        "sanctions_change": "Sanctions terminated",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "bc2ba425-11ce-485a-a243-e8b97af88335",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1046(2010)",
+      "resolution_number": 1046,
+      "date": "2010-11-29",
+      "meeting_number": 3046,
+      "geographical_locations": [
+        "Iraq"
+      ],
+      "resolution_title": "Threats to international peace and security caused by Iraq",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": null,
+      "charter_invoked": [
+        "Chapter VII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "a940aa08-8fb5-4b00-a974-d518ed6eb0fd",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1047(2003)",
+      "resolution_number": 1047,
+      "date": "2003-04-13",
+      "meeting_number": 3047,
+      "geographical_locations": [
+        "Democratic Republic of the Congo"
+      ],
+      "resolution_title": "Threats to international peace and security caused by Democratic Republic of the Congo",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Breach of Peace",
+      "charter_invoked": [
+        "Chapter VII",
+        "Chapter VIII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [
+      {
+        "operation_type": "Hybrid Mission",
+        "mission_name": null,
+        "mission_activity": "Mission modified",
+        "authorization_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        },
+        "mission_activation_termination": "Termination",
+        "deployed_personnel_levels": {
+          "military": 1470,
+          "police": 518,
+          "civilian": null,
+          "other": null
+        },
+        "description": "",
+        "change_in_authorized_strength": null,
+        "collaboration": [],
+        "inter_mission_loan_transfer": {
+          "direction": null,
+          "target": ""
+        },
+        "authorization_level_all_necessary_measures": true,
+        "mandate": [
+          "Enforcement"
+        ]
+      }
+    ],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "20b0da53-6ff3-4363-b665-cfb55573a6d6",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1048(1995)",
+      "resolution_number": 1048,
+      "date": "1995-04-28",
+      "meeting_number": 3048,
+      "geographical_locations": [
+        "Cote d'Ivoire"
+      ],
+      "resolution_title": "Peace and security in Cote d'Ivoire",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Threat to Peace",
+      "charter_invoked": [
+        "Chapter VII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [
+      {
+        "operation_type": "Peacekeeping Mission",
+        "mission_name": null,
+        "mission_activity": "Mission modified",
+        "authorization_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        },
+        "mission_activation_termination": "Activation",
+        "deployed_personnel_levels": {
+          "military": 11378,
+          "police": 3874,
+          "civilian": null,
+          "other": null
+        },
+        "description": "",
+        "change_in_authorized_strength": null,
+        "collaboration": [],
+        "inter_mission_loan_transfer": {
+          "direction": null,
+          "target": ""
+        },
+        "authorization_level_all_necessary_measures": true,
+        "mandate": [
+          "Enforcement",
+          "Governance support/democratic process",
+          "Providing humanitarian aid/reconstruction assistance"
+        ]
+      }
+    ],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "0a87943f-3ef0-4d5d-980f-a6c108aae7b0",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1049(1995)",
+      "resolution_number": 1049,
+      "date": "1995-01-21",
+      "meeting_number": 3049,
+      "geographical_locations": [
+        "Palestine"
+      ],
+      "resolution_title": "The question concerning Palestine",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Threat to Peace",
+      "charter_invoked": [
+        "Chapter VI"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [
+      {
+        "operation_type": "Hybrid Mission",
+        "mission_name": null,
+        "mission_activity": "Mission terminated",
+        "authorization_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        },
+        "mission_activation_termination": "Termination",
+        "deployed_personnel_levels": {
+          "military": 16348,
+          "police": 2305,
+          "civilian": null,
+          "other": null
+        },
+        "description": "",
+        "change_in_authorized_strength": null,
+        "collaboration": [],
+        "inter_mission_loan_transfer": {
+          "direction": null,
+          "target": ""
+        },
+        "authorization_level_all_necessary_measures": true,
+        "mandate": [
+          "Law and order/Justice",
+          "Providing humanitarian aid/reconstruction assistance",
+          "Governance support/democratic process"
+        ]
+      }
+    ],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "dcff951b-2003-44e9-9bb9-b862d1a557aa",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1050(2014)",
+      "resolution_number": 1050,
+      "date": "2014-09-02",
+      "meeting_number": 3050,
+      "geographical_locations": [
+        "Iran (Islamic Republic of)"
+      ],
+      "resolution_title": "The situation in Iran (Islamic Republic of)",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": null,
+      "charter_invoked": [
+        "Chapter VII",
+        "Chapter VIII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "66c71c03-d7ad-4200-a76d-f6023a769b73",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1051(1994)",
+      "resolution_number": 1051,
+      "date": "1994-08-18",
+      "meeting_number": 3051,
+      "geographical_locations": [
+        "Timor-Leste"
+      ],
+      "resolution_title": "The situation in Timor-Leste",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": null,
+      "charter_invoked": [
+        "Chapter VI"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "a7b9ef71-1066-426a-8584-516909b6f742",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1052(2008)",
+      "resolution_number": 1052,
+      "date": "2008-05-08",
+      "meeting_number": 3052,
+      "geographical_locations": [
+        "Mali"
+      ],
+      "resolution_title": "Reports of the Secretary-General on Mali",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Breach of Peace",
+      "charter_invoked": [],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Petroleum related"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Mali"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Activation",
+        "sanctions_change": "Sanctions terminated",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "e09e42d7-3266-4567-aff1-91c1b2510496",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1053(2014)",
+      "resolution_number": 1053,
+      "date": "2014-02-13",
+      "meeting_number": 3053,
+      "geographical_locations": [
+        "South Sudan"
+      ],
+      "resolution_title": "The situation in South Sudan",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Act of Aggression",
+      "charter_invoked": [
+        "Chapter VII",
+        "Chapter VIII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Petroleum related",
+          "Military goods/services",
+          "Travel"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "South Sudan"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Termination",
+        "sanctions_change": "Sanctions modified",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [
+      {
+        "operation_type": "Hybrid Mission",
+        "mission_name": null,
+        "mission_activity": "Mission modified",
+        "authorization_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        },
+        "mission_activation_termination": "Activation",
+        "deployed_personnel_levels": {
+          "military": 16927,
+          "police": 4095,
+          "civilian": null,
+          "other": null
+        },
+        "description": "",
+        "change_in_authorized_strength": null,
+        "collaboration": [],
+        "inter_mission_loan_transfer": {
+          "direction": null,
+          "target": ""
+        },
+        "authorization_level_all_necessary_measures": true,
+        "mandate": [
+          "Support for the implementation of the peace process",
+          "Enforcement"
+        ]
+      }
+    ],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "d7ddd2bd-9dbe-487b-bb94-4f354786731b",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1054(2000)",
+      "resolution_number": 1054,
+      "date": "2000-04-16",
+      "meeting_number": 3054,
+      "geographical_locations": [
+        "Libya"
+      ],
+      "resolution_title": "The situation in Libya",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Breach of Peace",
+      "charter_invoked": [
+        "Chapter VI"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "f594ea4c-58f6-46d8-aa91-ee27f79760fe",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1055(1992)",
+      "resolution_number": 1055,
+      "date": "1992-09-14",
+      "meeting_number": 3055,
+      "geographical_locations": [
+        "Somalia"
+      ],
+      "resolution_title": "The question concerning Somalia",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Breach of Peace",
+      "charter_invoked": [
+        "Chapter VI"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Petroleum related",
+          "Travel"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Somalia"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Termination",
+        "sanctions_change": "Sanctions started",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "2baa0b04-9d70-43a3-aa9f-488f0152f591",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1056(1992)",
+      "resolution_number": 1056,
+      "date": "1992-06-12",
+      "meeting_number": 3056,
+      "geographical_locations": [
+        "Libya"
+      ],
+      "resolution_title": "Peace and security in Libya",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Breach of Peace",
+      "charter_invoked": [],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "0cca784f-5cf5-4a33-ab74-c791357d0baf",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1057(2010)",
+      "resolution_number": 1057,
+      "date": "2010-05-27",
+      "meeting_number": 3057,
+      "geographical_locations": [
+        "Colombia"
+      ],
+      "resolution_title": "Threats to international peace and security caused by Colombia",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": null,
+      "charter_invoked": [
+        "Chapter VII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Military goods/services",
+          "Travel"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Colombia"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Termination",
+        "sanctions_change": "Sanctions started",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "fd914a58-4a42-4301-8376-213859744e08",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1058(1993)",
+      "resolution_number": 1058,
+      "date": "1993-01-14",
+      "meeting_number": 3058,
+      "geographical_locations": [
+        "Yemen"
+      ],
+      "resolution_title": "The situation in Yemen",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Threat to Peace",
+      "charter_invoked": [
+        "Chapter VII",
+        "Chapter VIII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "246b7a82-904e-49a1-8e8a-b9136035c138",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1059(1994)",
+      "resolution_number": 1059,
+      "date": "1994-10-21",
+      "meeting_number": 3059,
+      "geographical_locations": [
+        "Ukraine"
+      ],
+      "resolution_title": "The situation in Ukraine",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Act of Aggression",
+      "charter_invoked": [],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "43d4f32f-6fc0-45df-8c60-52e94c38a10e",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1060(1991)",
+      "resolution_number": 1060,
+      "date": "1991-05-26",
+      "meeting_number": 3060,
+      "geographical_locations": [
+        "Mali"
+      ],
+      "resolution_title": "The situation in Mali",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": null,
+      "charter_invoked": [
+        "Chapter VII",
+        "Chapter VIII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Assets",
+          "Diamonds",
+          "Travel"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Mali"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Suspension",
+        "sanctions_change": "Sanctions terminated",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "5c0802af-0309-4b4e-8cbe-db50159f2f21",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1061(2014)",
+      "resolution_number": 1061,
+      "date": "2014-12-06",
+      "meeting_number": 3061,
+      "geographical_locations": [
+        "Georgia"
+      ],
+      "resolution_title": "Threats to international peace and security caused by Georgia",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Breach of Peace",
+      "charter_invoked": [
+        "Chapter VII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "66553e5e-effa-4163-a5db-5c506ecd8e37",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1062(1993)",
+      "resolution_number": 1062,
+      "date": "1993-09-21",
+      "meeting_number": 3062,
+      "geographical_locations": [
+        "Nepal"
+      ],
+      "resolution_title": "Reports of the Secretary-General on Nepal",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": null,
+      "charter_invoked": [
+        "Chapter VII",
+        "Chapter VIII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Diamonds",
+          "Travel",
+          "Military goods/services"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Nepal"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Activation",
+        "sanctions_change": "Sanctions modified",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "6295c180-b3d7-481c-b370-c7959b77ab93",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1063(1993)",
+      "resolution_number": 1063,
+      "date": "1993-05-05",
+      "meeting_number": 3063,
+      "geographical_locations": [
+        "Eritrea"
+      ],
+      "resolution_title": "Threats to international peace and security caused by Eritrea",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Threat to Peace",
+      "charter_invoked": [
+        "Chapter VII",
+        "Chapter VIII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Diamonds",
+          "Assets"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Eritrea"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Termination",
+        "sanctions_change": "Sanctions modified",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [
+      {
+        "operation_type": "Peacekeeping Mission",
+        "mission_name": null,
+        "mission_activity": "Mission terminated",
+        "authorization_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        },
+        "mission_activation_termination": "Termination",
+        "deployed_personnel_levels": {
+          "military": 6856,
+          "police": 1334,
+          "civilian": null,
+          "other": null
+        },
+        "description": "",
+        "change_in_authorized_strength": null,
+        "collaboration": [],
+        "inter_mission_loan_transfer": {
+          "direction": null,
+          "target": ""
+        },
+        "authorization_level_all_necessary_measures": true,
+        "mandate": [
+          "Governance support/democratic process",
+          "Support for the implementation of the peace process"
+        ]
+      }
+    ],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "9a8e9aec-883f-48fd-abce-6602e06b46fd",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1064(2021)",
+      "resolution_number": 1064,
+      "date": "2021-08-08",
+      "meeting_number": 3064,
+      "geographical_locations": [
+        "Liberia"
+      ],
+      "resolution_title": "The question concerning Liberia",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Threat to Peace",
+      "charter_invoked": [
+        "Chapter VII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "3d1e47aa-8257-453f-8b1d-ae5e06283f69",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1065(1995)",
+      "resolution_number": 1065,
+      "date": "1995-03-12",
+      "meeting_number": 3065,
+      "geographical_locations": [
+        "Afghanistan"
+      ],
+      "resolution_title": "Peace and security in Afghanistan",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Act of Aggression",
+      "charter_invoked": [
+        "Chapter VII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Assets",
+          "Petroleum related"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Afghanistan"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Activation",
+        "sanctions_change": "Sanctions started",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "fe4dd827-73e5-4de6-af21-7d7b8caa964e",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1066(2022)",
+      "resolution_number": 1066,
+      "date": "2022-05-14",
+      "meeting_number": 3066,
+      "geographical_locations": [
+        "Sierra Leone"
+      ],
+      "resolution_title": "Reports of the Secretary-General on Sierra Leone",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": null,
+      "charter_invoked": [
+        "Chapter VI"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "8cf93329-453a-4e0f-aa72-b162778f405a",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1067(2014)",
+      "resolution_number": 1067,
+      "date": "2014-12-24",
+      "meeting_number": 3067,
+      "geographical_locations": [
+        "Libya"
+      ],
+      "resolution_title": "The situation in Libya",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": null,
+      "charter_invoked": [
+        "Chapter VI"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "7570be41-884f-4c43-92d6-a8f2e7671ba6",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1068(1997)",
+      "resolution_number": 1068,
+      "date": "1997-07-19",
+      "meeting_number": 3068,
+      "geographical_locations": [
+        "Eritrea"
+      ],
+      "resolution_title": "The situation in Eritrea",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Threat to Peace",
+      "charter_invoked": [
+        "Chapter VI"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "380ef1c0-7b99-425f-bec5-6ecfa4c038e3",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1069(1994)",
+      "resolution_number": 1069,
+      "date": "1994-04-01",
+      "meeting_number": 3069,
+      "geographical_locations": [
+        "Libya"
+      ],
+      "resolution_title": "The situation in Libya",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Breach of Peace",
+      "charter_invoked": [
+        "Chapter VII",
+        "Chapter VIII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "3cf60d09-b95f-4c8d-a388-dd1c80b45bf2",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1070(2000)",
+      "resolution_number": 1070,
+      "date": "2000-01-20",
+      "meeting_number": 3070,
+      "geographical_locations": [
+        "Iraq"
+      ],
+      "resolution_title": "Reports of the Secretary-General on Iraq",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Act of Aggression",
+      "charter_invoked": [
+        "Chapter VII",
+        "Chapter VIII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "f54863da-7997-4929-b72b-bf0be522b870",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1071(2008)",
+      "resolution_number": 1071,
+      "date": "2008-04-05",
+      "meeting_number": 3071,
+      "geographical_locations": [
+        "Somalia"
+      ],
+      "resolution_title": "Threats to international peace and security caused by Somalia",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Act of Aggression",
+      "charter_invoked": [
+        "Chapter VI"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Military goods/services"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Somalia"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Activation",
+        "sanctions_change": "Sanctions terminated",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "9c606224-7943-4461-a76e-69c85d724d85",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1072(2003)",
+      "resolution_number": 1072,
+      "date": "2003-07-20",
+      "meeting_number": 3072,
+      "geographical_locations": [
+        "Timor-Leste"
+      ],
+      "resolution_title": "The question concerning Timor-Leste",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Threat to Peace",
+      "charter_invoked": [],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "24fcc427-ee35-4a41-8a99-2fe8cfa1bd31",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1073(2016)",
+      "resolution_number": 1073,
+      "date": "2016-10-13",
+      "meeting_number": 3073,
+      "geographical_locations": [
+        "Ukraine"
+      ],
+      "resolution_title": "Reports of the Secretary-General on Ukraine",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": null,
+      "charter_invoked": [
+        "Chapter VII",
+        "Chapter VIII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Travel",
+          "Military goods/services"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Ukraine"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Activation",
+        "sanctions_change": "Sanctions terminated",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "d35e612b-dfa3-4cfb-a464-f5a026e5bb3b",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1074(2000)",
+      "resolution_number": 1074,
+      "date": "2000-12-21",
+      "meeting_number": 3074,
+      "geographical_locations": [
+        "Sudan"
+      ],
+      "resolution_title": "Peace and security in Sudan",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Act of Aggression",
+      "charter_invoked": [
+        "Chapter VII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "dba0e31a-8620-40a9-83ab-aed9d7f8604b",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1075(2011)",
+      "resolution_number": 1075,
+      "date": "2011-07-25",
+      "meeting_number": 3075,
+      "geographical_locations": [
+        "Iran (Islamic Republic of)"
+      ],
+      "resolution_title": "Threats to international peace and security caused by Iran (Islamic Republic of)",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Act of Aggression",
+      "charter_invoked": [
+        "Chapter VII",
+        "Chapter VIII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [
+      {
+        "operation_type": "Peacekeeping Mission",
+        "mission_name": null,
+        "mission_activity": "Mission terminated",
+        "authorization_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        },
+        "mission_activation_termination": "Termination",
+        "deployed_personnel_levels": {
+          "military": 12497,
+          "police": 1470,
+          "civilian": null,
+          "other": null
+        },
+        "description": "",
+        "change_in_authorized_strength": null,
+        "collaboration": [],
+        "inter_mission_loan_transfer": {
+          "direction": null,
+          "target": ""
+        },
+        "authorization_level_all_necessary_measures": false,
+        "mandate": [
+          "Protection of UN Personnel, institutions and civilians (freedom of movement, etc.)",
+          "Law and order/Justice"
+        ]
+      }
+    ],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "86e8e30e-a405-4a54-83fa-e196469605a6",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1076(2018)",
+      "resolution_number": 1076,
+      "date": "2018-06-13",
+      "meeting_number": 3076,
+      "geographical_locations": [
+        "Cameroon"
+      ],
+      "resolution_title": "Threats to international peace and security caused by Cameroon",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": null,
+      "charter_invoked": [
+        "Chapter VII",
+        "Chapter VIII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [
+      {
+        "operation_type": "Special Political Mission",
+        "mission_name": null,
+        "mission_activity": "Mission started",
+        "authorization_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        },
+        "mission_activation_termination": "Termination",
+        "deployed_personnel_levels": {
+          "military": 10959,
+          "police": 3974,
+          "civilian": null,
+          "other": null
+        },
+        "description": "",
+        "change_in_authorized_strength": null,
+        "collaboration": [],
+        "inter_mission_loan_transfer": {
+          "direction": null,
+          "target": ""
+        },
+        "authorization_level_all_necessary_measures": true,
+        "mandate": [
+          "Protection of UN Personnel, institutions and civilians (freedom of movement, etc.)"
+        ]
+      }
+    ],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "c422f1e5-d8e3-44b8-9e37-838243111b15",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1077(2018)",
+      "resolution_number": 1077,
+      "date": "2018-08-10",
+      "meeting_number": 3077,
+      "geographical_locations": [
+        "Eritrea"
+      ],
+      "resolution_title": "The situation in Eritrea",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Threat to Peace",
+      "charter_invoked": [
+        "Chapter VII",
+        "Chapter VIII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Travel"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Eritrea"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Suspension",
+        "sanctions_change": "Sanctions started",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "500fb007-7b53-48fc-bb9c-1e76b3848520",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1078(1996)",
+      "resolution_number": 1078,
+      "date": "1996-08-07",
+      "meeting_number": 3078,
+      "geographical_locations": [
+        "Lebanon"
+      ],
+      "resolution_title": "The question concerning Lebanon",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Act of Aggression",
+      "charter_invoked": [
+        "Chapter VII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Military goods/services"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Lebanon"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Suspension",
+        "sanctions_change": "Sanctions terminated",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "46f5369b-e800-4751-872a-3d62998b2acc",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1079(2005)",
+      "resolution_number": 1079,
+      "date": "2005-02-11",
+      "meeting_number": 3079,
+      "geographical_locations": [
+        "Colombia"
+      ],
+      "resolution_title": "Peace and security in Colombia",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": null,
+      "charter_invoked": [
+        "Chapter VI"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Military goods/services",
+          "Petroleum related",
+          "Travel"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Colombia"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Activation",
+        "sanctions_change": "Sanctions started",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "3b53683c-df89-4dff-891a-b1bf07ec5f7c",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1080(1991)",
+      "resolution_number": 1080,
+      "date": "1991-01-29",
+      "meeting_number": 3080,
+      "geographical_locations": [
+        "Yemen"
+      ],
+      "resolution_title": "Threats to international peace and security caused by Yemen",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Act of Aggression",
+      "charter_invoked": [
+        "Chapter VII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "dbb678f1-07e0-487c-b96b-058f58f66525",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1081(2017)",
+      "resolution_number": 1081,
+      "date": "2017-06-20",
+      "meeting_number": 3081,
+      "geographical_locations": [
+        "Myanmar"
+      ],
+      "resolution_title": "The question concerning Myanmar",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": null,
+      "charter_invoked": [],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [
+      {
+        "operation_type": "Special Political Mission",
+        "mission_name": null,
+        "mission_activity": "Mission started",
+        "authorization_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        },
+        "mission_activation_termination": "Termination",
+        "deployed_personnel_levels": {
+          "military": 3212,
+          "police": 4537,
+          "civilian": null,
+          "other": null
+        },
+        "description": "",
+        "change_in_authorized_strength": null,
+        "collaboration": [],
+        "inter_mission_loan_transfer": {
+          "direction": null,
+          "target": ""
+        },
+        "authorization_level_all_necessary_measures": false,
+        "mandate": [
+          "Governance support/democratic process"
+        ]
+      }
+    ],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "4b2a0865-0dee-4f55-bf63-e2205cbfa732",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1082(2011)",
+      "resolution_number": 1082,
+      "date": "2011-02-09",
+      "meeting_number": 3082,
+      "geographical_locations": [
+        "Haiti"
+      ],
+      "resolution_title": "Threats to international peace and security caused by Haiti",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": null,
+      "charter_invoked": [
+        "Chapter VI"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Military goods/services"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Haiti"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Suspension",
+        "sanctions_change": "Sanctions modified",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [
+      {
+        "operation_type": "Hybrid Mission",
+        "mission_name": null,
+        "mission_activity": "Mission terminated",
+        "authorization_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        },
+        "mission_activation_termination": "Activation",
+        "deployed_personnel_levels": {
+          "military": 7363,
+          "police": 2577,
+          "civilian": null,
+          "other": null
+        },
+        "description": "",
+        "change_in_authorized_strength": null,
+        "collaboration": [],
+        "inter_mission_loan_transfer": {
+          "direction": null,
+          "target": ""
+        },
+        "authorization_level_all_necessary_measures": false,
+        "mandate": [
+          "DDRRR/DDR"
+        ]
+      }
+    ],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "ac47f284-a98b-4067-90a9-b127ce5cc294",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1083(1995)",
+      "resolution_number": 1083,
+      "date": "1995-05-17",
+      "meeting_number": 3083,
+      "geographical_locations": [
+        "Sudan"
+      ],
+      "resolution_title": "Reports of the Secretary-General on Sudan",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Act of Aggression",
+      "charter_invoked": [
+        "Chapter VII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "37465c8f-8a2f-44d8-b91a-f7dcbc9a89ac",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1084(1990)",
+      "resolution_number": 1084,
+      "date": "1990-01-29",
+      "meeting_number": 3084,
+      "geographical_locations": [
+        "Nigeria"
+      ],
+      "resolution_title": "Peace and security in Nigeria",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": null,
+      "charter_invoked": [
+        "Chapter VII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Diamonds",
+          "Travel",
+          "Assets"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Nigeria"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Activation",
+        "sanctions_change": "Sanctions terminated",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [
+      {
+        "operation_type": "Special Political Mission",
+        "mission_name": null,
+        "mission_activity": "Mission started",
+        "authorization_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        },
+        "mission_activation_termination": "Termination",
+        "deployed_personnel_levels": {
+          "military": 15850,
+          "police": 2061,
+          "civilian": null,
+          "other": null
+        },
+        "description": "",
+        "change_in_authorized_strength": null,
+        "collaboration": [],
+        "inter_mission_loan_transfer": {
+          "direction": null,
+          "target": ""
+        },
+        "authorization_level_all_necessary_measures": true,
+        "mandate": [
+          "DDRRR/DDR"
+        ]
+      }
+    ],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "91b8a514-943b-48ae-bb8b-c8535414f35d",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1085(2004)",
+      "resolution_number": 1085,
+      "date": "2004-01-20",
+      "meeting_number": 3085,
+      "geographical_locations": [
+        "Iran (Islamic Republic of)"
+      ],
+      "resolution_title": "The question concerning Iran (Islamic Republic of)",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Breach of Peace",
+      "charter_invoked": [],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [
+      {
+        "operation_type": "Special Political Mission",
+        "mission_name": null,
+        "mission_activity": "Mission terminated",
+        "authorization_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        },
+        "mission_activation_termination": "Activation",
+        "deployed_personnel_levels": {
+          "military": 9356,
+          "police": 3922,
+          "civilian": null,
+          "other": null
+        },
+        "description": "",
+        "change_in_authorized_strength": null,
+        "collaboration": [],
+        "inter_mission_loan_transfer": {
+          "direction": null,
+          "target": ""
+        },
+        "authorization_level_all_necessary_measures": false,
+        "mandate": [
+          "Enforcement",
+          "Protection of UN Personnel, institutions and civilians (freedom of movement, etc.)",
+          "Governance support/democratic process"
+        ]
+      }
+    ],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "65e3c29e-8440-4cfb-ad6a-4917db92d7f8",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1086(1995)",
+      "resolution_number": 1086,
+      "date": "1995-01-08",
+      "meeting_number": 3086,
+      "geographical_locations": [
+        "Nigeria"
+      ],
+      "resolution_title": "Threats to international peace and security caused by Nigeria",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Breach of Peace",
+      "charter_invoked": [
+        "Chapter VII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "d065e66e-ffe1-4fb9-bbb8-c7d03f02b10f",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1087(2007)",
+      "resolution_number": 1087,
+      "date": "2007-11-29",
+      "meeting_number": 3087,
+      "geographical_locations": [
+        "Georgia"
+      ],
+      "resolution_title": "Reports of the Secretary-General on Georgia",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Breach of Peace",
+      "charter_invoked": [],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Travel",
+          "Military goods/services"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Georgia"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Activation",
+        "sanctions_change": "Sanctions terminated",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [
+      {
+        "operation_type": "Special Political Mission",
+        "mission_name": null,
+        "mission_activity": "Mission modified",
+        "authorization_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        },
+        "mission_activation_termination": "Activation",
+        "deployed_personnel_levels": {
+          "military": 4564,
+          "police": 3002,
+          "civilian": null,
+          "other": null
+        },
+        "description": "",
+        "change_in_authorized_strength": null,
+        "collaboration": [],
+        "inter_mission_loan_transfer": {
+          "direction": null,
+          "target": ""
+        },
+        "authorization_level_all_necessary_measures": false,
+        "mandate": [
+          "Providing humanitarian aid/reconstruction assistance",
+          "Enforcement"
+        ]
+      }
+    ],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "3ae3e6fc-0689-48ff-80f3-812f2356a34e",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1088(2009)",
+      "resolution_number": 1088,
+      "date": "2009-12-14",
+      "meeting_number": 3088,
+      "geographical_locations": [
+        "Eritrea"
+      ],
+      "resolution_title": "Reports of the Secretary-General on Eritrea",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Breach of Peace",
+      "charter_invoked": [
+        "Chapter VII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [
+      {
+        "operation_type": "Special Political Mission",
+        "mission_name": null,
+        "mission_activity": "Mission terminated",
+        "authorization_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        },
+        "mission_activation_termination": "Termination",
+        "deployed_personnel_levels": {
+          "military": 12935,
+          "police": 2270,
+          "civilian": null,
+          "other": null
+        },
+        "description": "",
+        "change_in_authorized_strength": null,
+        "collaboration": [],
+        "inter_mission_loan_transfer": {
+          "direction": null,
+          "target": ""
+        },
+        "authorization_level_all_necessary_measures": true,
+        "mandate": [
+          "Law and order/Justice",
+          "Support for the implementation of the peace process",
+          "Enforcement"
+        ]
+      }
+    ],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "7001177f-52c5-48c9-88b5-586a7ebba27c",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1089(2009)",
+      "resolution_number": 1089,
+      "date": "2009-01-06",
+      "meeting_number": 3089,
+      "geographical_locations": [
+        "Bosnia and Herzegovina"
+      ],
+      "resolution_title": "Reports of the Secretary-General on Bosnia and Herzegovina",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Breach of Peace",
+      "charter_invoked": [
+        "Chapter VI"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "4bc6df9b-1b2e-4df2-b46c-22329a80ab78",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1090(2000)",
+      "resolution_number": 1090,
+      "date": "2000-06-04",
+      "meeting_number": 3090,
+      "geographical_locations": [
+        "Iran (Islamic Republic of)"
+      ],
+      "resolution_title": "The situation in Iran (Islamic Republic of)",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Threat to Peace",
+      "charter_invoked": [],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "10eea9b9-d700-42c8-8722-ae91ac02dc18",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1091(2009)",
+      "resolution_number": 1091,
+      "date": "2009-08-31",
+      "meeting_number": 3091,
+      "geographical_locations": [
+        "Eritrea"
+      ],
+      "resolution_title": "Reports of the Secretary-General on Eritrea",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Threat to Peace",
+      "charter_invoked": [],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "aea2714d-329a-4197-9385-7ccd08c01edb",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1092(2004)",
+      "resolution_number": 1092,
+      "date": "2004-06-24",
+      "meeting_number": 3092,
+      "geographical_locations": [
+        "Cameroon"
+      ],
+      "resolution_title": "Peace and security in Cameroon",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Threat to Peace",
+      "charter_invoked": [],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [
+      {
+        "operation_type": "Hybrid Mission",
+        "mission_name": null,
+        "mission_activity": "Mission started",
+        "authorization_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        },
+        "mission_activation_termination": "Activation",
+        "deployed_personnel_levels": {
+          "military": 4978,
+          "police": 2772,
+          "civilian": null,
+          "other": null
+        },
+        "description": "",
+        "change_in_authorized_strength": null,
+        "collaboration": [],
+        "inter_mission_loan_transfer": {
+          "direction": null,
+          "target": ""
+        },
+        "authorization_level_all_necessary_measures": false,
+        "mandate": [
+          "Enforcement",
+          "Law and order/Justice"
+        ]
+      }
+    ],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "3ce00da8-2ead-4021-9586-5d8c4bd2ee40",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1093(2003)",
+      "resolution_number": 1093,
+      "date": "2003-12-02",
+      "meeting_number": 3093,
+      "geographical_locations": [
+        "Senegal"
+      ],
+      "resolution_title": "The question concerning Senegal",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Act of Aggression",
+      "charter_invoked": [
+        "Chapter VI"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Diamonds",
+          "Petroleum related",
+          "Assets"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Senegal"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Activation",
+        "sanctions_change": "Sanctions modified",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "28b52228-2b09-498e-8edf-e63e0528a974",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1094(2004)",
+      "resolution_number": 1094,
+      "date": "2004-03-06",
+      "meeting_number": 3094,
+      "geographical_locations": [
+        "Iraq"
+      ],
+      "resolution_title": "Peace and security in Iraq",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Breach of Peace",
+      "charter_invoked": [
+        "Chapter VII",
+        "Chapter VIII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "f06071ce-5855-45f2-9b04-69b66f1e17f5",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1095(1997)",
+      "resolution_number": 1095,
+      "date": "1997-03-08",
+      "meeting_number": 3095,
+      "geographical_locations": [
+        "Mozambique"
+      ],
+      "resolution_title": "The question concerning Mozambique",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Act of Aggression",
+      "charter_invoked": [
+        "Chapter VI"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [
+      {
+        "operation_type": "Special Political Mission",
+        "mission_name": null,
+        "mission_activity": "Mission modified",
+        "authorization_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        },
+        "mission_activation_termination": "Activation",
+        "deployed_personnel_levels": {
+          "military": 8223,
+          "police": 514,
+          "civilian": null,
+          "other": null
+        },
+        "description": "",
+        "change_in_authorized_strength": null,
+        "collaboration": [],
+        "inter_mission_loan_transfer": {
+          "direction": null,
+          "target": ""
+        },
+        "authorization_level_all_necessary_measures": false,
+        "mandate": [
+          "Law and order/Justice",
+          "Enforcement",
+          "Protection of UN Personnel, institutions and civilians (freedom of movement, etc.)"
+        ]
+      }
+    ],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "02347a97-d626-4697-aefe-22d2106c3f65",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1096(1991)",
+      "resolution_number": 1096,
+      "date": "1991-03-22",
+      "meeting_number": 3096,
+      "geographical_locations": [
+        "Bosnia and Herzegovina"
+      ],
+      "resolution_title": "Reports of the Secretary-General on Bosnia and Herzegovina",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Threat to Peace",
+      "charter_invoked": [
+        "Chapter VI"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [
+      {
+        "modified_resolution": {
+          "enabled": false,
+          "resolution_number": null
+        },
+        "items_regulated_inbound": [
+          "Assets",
+          "Petroleum related"
+        ],
+        "items_regulated_outbound": [],
+        "items_regulated_domestic": [],
+        "exceptions": [],
+        "target_comprehensive": false,
+        "target_region": "",
+        "target_state": [
+          "Bosnia and Herzegovina"
+        ],
+        "target_non_state": "",
+        "target_entities_business": "",
+        "target_individual": "",
+        "reason": [],
+        "sanctions_status": "Termination",
+        "sanctions_change": "Sanctions modified",
+        "sanctions_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        }
+      }
+    ],
+    "un_peace_operations": [
+      {
+        "operation_type": "Special Political Mission",
+        "mission_name": null,
+        "mission_activity": "Mission terminated",
+        "authorization_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        },
+        "mission_activation_termination": "Termination",
+        "deployed_personnel_levels": {
+          "military": 3574,
+          "police": 350,
+          "civilian": null,
+          "other": null
+        },
+        "description": "",
+        "change_in_authorized_strength": null,
+        "collaboration": [],
+        "inter_mission_loan_transfer": {
+          "direction": null,
+          "target": ""
+        },
+        "authorization_level_all_necessary_measures": true,
+        "mandate": [
+          "Providing humanitarian aid/reconstruction assistance",
+          "DDRRR/DDR"
+        ]
+      }
+    ],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "518a1e86-26f8-4069-a627-2fb35a47faba",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1097(2001)",
+      "resolution_number": 1097,
+      "date": "2001-01-14",
+      "meeting_number": 3097,
+      "geographical_locations": [
+        "Syrian Arab Republic"
+      ],
+      "resolution_title": "Peace and security in Syrian Arab Republic",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Act of Aggression",
+      "charter_invoked": [
+        "Chapter VII",
+        "Chapter VIII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "5d88d20f-1fbb-41e6-8643-ada0c533f3bc",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1098(2016)",
+      "resolution_number": 1098,
+      "date": "2016-06-10",
+      "meeting_number": 3098,
+      "geographical_locations": [
+        "Somalia"
+      ],
+      "resolution_title": "Peace and security in Somalia",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Act of Aggression",
+      "charter_invoked": [
+        "Chapter VI"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [
+      {
+        "operation_type": "Peacekeeping Mission",
+        "mission_name": null,
+        "mission_activity": "Mission modified",
+        "authorization_time_period": {
+          "mode": null,
+          "duration_value": null,
+          "duration_unit": null,
+          "until_date": null
+        },
+        "mission_activation_termination": "Termination",
+        "deployed_personnel_levels": {
+          "military": 14740,
+          "police": 3172,
+          "civilian": null,
+          "other": null
+        },
+        "description": "",
+        "change_in_authorized_strength": null,
+        "collaboration": [],
+        "inter_mission_loan_transfer": {
+          "direction": null,
+          "target": ""
+        },
+        "authorization_level_all_necessary_measures": false,
+        "mandate": [
+          "Governance support/democratic process"
+        ]
+      }
+    ],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  },
+  {
+    "record_id": "2d00b69f-3541-43fc-b3e8-bfcb0a389c77",
+    "general": {
+      "un_document_url": "https://undocs.org/S/RES/1099(2021)",
+      "resolution_number": 1099,
+      "date": "2021-11-04",
+      "meeting_number": 3099,
+      "geographical_locations": [
+        "Haiti"
+      ],
+      "resolution_title": "The situation in Haiti",
+      "references_resolutions": [],
+      "references_prst": [],
+      "references_other": [],
+      "threat_level": "Threat to Peace",
+      "charter_invoked": [
+        "Chapter VII"
+      ],
+      "referrals": ""
+    },
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": {
+      "tribunal_name": []
+    },
+    "other_subsidiary_organs": {
+      "subsidiary_organ_type": []
+    },
+    "thematic_resolutions": {
+      "theme": ""
+    },
+    "membership": {
+      "new_member_name": [],
+      "other_membership_issue": ""
+    },
+    "appointment_related": {
+      "organization": []
+    },
+    "other": {
+      "note": "",
+      "annex_attached": false
+    },
+    "created_at": "2026-03-09T04:54:33Z",
+    "updated_at": "2026-03-09T04:54:33Z"
+  }
+]

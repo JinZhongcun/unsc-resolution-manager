@@ -372,4 +372,8 @@ def normalize_record(record: dict[str, Any]) -> tuple[dict[str, Any], list[str]]
     normalized['other']['note'] = _string(other.get('note'))
     normalized['other']['annex_attached'] = _bool(other.get('annex_attached'))
 
+    now = datetime.utcnow().strftime('%Y-%m-%dT%H:%M:%SZ')
+    normalized['created_at'] = source.get('created_at') or now
+    normalized['updated_at'] = now
+
     return normalized, errors

@@ -207,6 +207,8 @@ def default_record() -> dict[str, Any]:
         'membership': {'new_member_name': [], 'other_membership_issue': ''},
         'appointment_related': {'organization': []},
         'other': {'note': '', 'annex_attached': False},
+        'created_at': None,
+        'updated_at': None,
     }
 
 

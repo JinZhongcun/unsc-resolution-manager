@@ -148,6 +148,16 @@ def render_record_detail(record: dict[str, Any]) -> None:
     detail = record.get('detail', record)
     general = detail.get('general', {})
 
+    created = detail.get('created_at', '')
+    updated = detail.get('updated_at', '')
+    if created or updated:
+        ts_parts = []
+        if created:
+            ts_parts.append(f"Created: {created}")
+        if updated:
+            ts_parts.append(f"Updated: {updated}")
+        st.caption(' | '.join(ts_parts))
+
     st.markdown('#### General')
     info_cols = st.columns(3)
     info_cols[0].markdown(f"**Resolution:** {general.get('resolution_number', '—')}")
@@ -775,6 +785,17 @@ def main() -> None:
     if active_view == TAB_LIST:
         with st.expander('Search filters', expanded=False):
             filtered_public = run_filters(public_records)
+
+        sort_cols = st.columns([1, 1, 3])
+        with sort_cols[0]:
+            sort_by = st.selectbox('Sort by', ['Updated (newest)', 'Updated (oldest)', 'Resolution # (asc)', 'Resolution # (desc)', 'Date (newest)', 'Date (oldest)'], key='list_sort', label_visibility='collapsed')
+        sort_map = {
+            'Updated (newest)': lambda r: r.get('updated_at') or '', 'Updated (oldest)': lambda r: r.get('updated_at') or '',
+            'Resolution # (asc)': lambda r: r.get('resolution_number') or 0, 'Resolution # (desc)': lambda r: r.get('resolution_number') or 0,
+            'Date (newest)': lambda r: r.get('date') or '', 'Date (oldest)': lambda r: r.get('date') or '',
+        }
+        reverse = sort_by in ('Updated (newest)', 'Resolution # (desc)', 'Date (newest)')
+        filtered_public = sorted(filtered_public, key=sort_map[sort_by], reverse=reverse)
 
         header_cols = st.columns([1, 1, 3])
         with header_cols[0]:

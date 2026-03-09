@@ -123,6 +123,8 @@ def build_public_record(record: dict[str, Any]) -> dict[str, Any]:
         'geographical_locations': general.get('geographical_locations', []),
         'categories_present': _categories_present(record),
         'tag_filters': _tag_filters(record),
+        'created_at': record.get('created_at'),
+        'updated_at': record.get('updated_at'),
         'detail': record,
     }
 
