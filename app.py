@@ -637,21 +637,19 @@ def main() -> None:
         with st.expander('Search filters', expanded=False):
             filtered_public = run_filters(public_records)
 
-        header_cols = st.columns([1, 1, 1, 2])
+        header_cols = st.columns([1, 1, 3])
         with header_cols[0]:
             st.markdown(f'**{len(filtered_public)}** shown / {len(public_records)} total')
         with header_cols[1]:
-            if st.button('Regenerate public JSON'):
-                try:
-                    save_public_records(records, PUBLIC_RECORDS_PATH)
-                except Exception as exc:
-                    st.error('Failed to regenerate public JSON.')
-                    st.code(str(exc))
-                else:
-                    st.success(f'Public JSON regenerated: {PUBLIC_RECORDS_PATH.name}')
-        with header_cols[2]:
-            public_json = json.dumps(public_records, ensure_ascii=False, indent=2)
-            st.download_button('Download JSON', data=public_json, file_name='public_records.json', mime='application/json')
+            try:
+                save_public_records(records, PUBLIC_RECORDS_PATH)
+                public_json = json.dumps(generate_public_records(records), ensure_ascii=False, indent=2)
+            except Exception as exc:
+                st.error('Failed to generate public JSON.')
+                st.code(str(exc))
+                public_json = None
+            if public_json is not None:
+                st.download_button('Download public JSON', data=public_json, file_name='public_records.json', mime='application/json')
 
         if not filtered_public:
             st.info('No matching records.')
