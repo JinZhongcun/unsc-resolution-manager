@@ -7,6 +7,7 @@ from pathlib import Path
 from typing import Any
 
 from form_spec import CATEGORY_LABELS
+from custom_fields import collect_searchable_custom_tags
 
 
 def _collect_values(value: Any) -> list[str]:
@@ -37,7 +38,8 @@ def _category_has_data(value: Any) -> bool:
 
 
 
-def _tag_filters(record: dict[str, Any]) -> list[str]:
+def _tag_filters(record: dict[str, Any], schema: dict[str, Any] | None = None) -> list[str]:
+    schema = schema or {'categories': {}}
     tags: list[str] = []
     seen: set[str] = set()
 
@@ -83,6 +85,8 @@ def _tag_filters(record: dict[str, Any]) -> list[str]:
     add(record.get('other_subsidiary_organs', {}).get('subsidiary_organ_type'))
     add(record.get('membership', {}).get('new_member_name'))
     add(record.get('appointment_related', {}).get('organization'))
+    for item in collect_searchable_custom_tags(record, schema):
+        add(item)
     return tags
 
 
@@ -106,7 +110,8 @@ def _categories_present(record: dict[str, Any]) -> list[str]:
 
 
 
-def build_public_record(record: dict[str, Any]) -> dict[str, Any]:
+def build_public_record(record: dict[str, Any], schema: dict[str, Any] | None = None) -> dict[str, Any]:
+    schema = schema or {'categories': {}}
     general = record.get('general', {})
     date_value = general.get('date') or ''
     try:
@@ -122,23 +127,22 @@ def build_public_record(record: dict[str, Any]) -> dict[str, Any]:
         'un_document_url': general.get('un_document_url'),
         'geographical_locations': general.get('geographical_locations', []),
         'categories_present': _categories_present(record),
-        'tag_filters': _tag_filters(record),
-        'created_at': record.get('created_at'),
-        'updated_at': record.get('updated_at'),
+        'tag_filters': _tag_filters(record, schema),
         'detail': record,
     }
 
 
 
-def generate_public_records(records: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    return [build_public_record(record) for record in records]
+def generate_public_records(records: list[dict[str, Any]], schema: dict[str, Any] | None = None) -> list[dict[str, Any]]:
+    schema = schema or {'categories': {}}
+    return [build_public_record(record, schema) for record in records]
 
 
 
-def save_public_records(records: list[dict[str, Any]], path: str | Path) -> None:
+def save_public_records(records: list[dict[str, Any]], path: str | Path, schema: dict[str, Any] | None = None) -> None:
     path = Path(path)
     path.parent.mkdir(parents=True, exist_ok=True)
     tmp = path.with_suffix(path.suffix + '.tmp')
-    public_records = generate_public_records(records)
+    public_records = generate_public_records(records, schema)
     tmp.write_text(json.dumps(public_records, ensure_ascii=False, indent=2), encoding='utf-8')
     tmp.replace(path)

@@ -1,6 +1,5 @@
 from __future__ import annotations
 
-import json
 from copy import deepcopy
 from typing import Any
 import sys
@@ -8,6 +7,7 @@ import sys
 import streamlit as st
 
 from export_public import generate_public_records, save_public_records
+from custom_fields import CUSTOM_KEY, empty_custom_payload, ensure_custom_defaults
 from form_spec import (
     CATEGORY_ORDER,
     TIME_PERIOD_MODE_MAP_REVERSE,
@@ -48,25 +48,15 @@ from masters import (
     TIME_PERIOD_MODE_OPTIONS,
     TRIBUNAL_NAME_OPTIONS,
 )
-from storage import PUBLIC_RECORDS_PATH, RECORDS_PATH, ensure_data_files, load_records, save_records, upsert_record
+from storage import PUBLIC_RECORDS_PATH, RECORDS_PATH, SCHEMA_OVERRIDES_PATH, ensure_data_files, load_records, save_records, upsert_record
 from validators import normalize_record
+from schema_overrides import default_value_for_field, get_category_fields, load_schema_overrides
 
 
 st.set_page_config(page_title='UNSC Metadata Backend', layout='wide')
 
-st.markdown(
-    '<style>'
-    '.remove-block-wrapper button { '
-    'background-color: #ff4b4b !important; color: white !important; '
-    'border: none !important; }'
-    '.remove-block-wrapper button:hover { '
-    'background-color: #e03e3e !important; }'
-    '</style>',
-    unsafe_allow_html=True,
-)
-
 if sys.version_info < (3, 11):
-    st.error('Python 3.11 or later is required.')
+    st.error('Python 3.11 以上で実行してください。')
     st.stop()
 
 EDITOR_PREFIX = 'editor_'
@@ -79,8 +69,12 @@ def clear_editor_widget_state() -> None:
 
 
 
+def get_runtime_schema() -> dict[str, Any]:
+    return st.session_state.get('_runtime_custom_schema', {'categories': {}})
+
+
 def load_record_into_editor(record: dict[str, Any]) -> None:
-    st.session_state.current_record = clone_record(record)
+    st.session_state.current_record = ensure_custom_defaults(clone_record(record), get_runtime_schema())
     clear_editor_widget_state()
 
 
@@ -142,167 +136,71 @@ def render_checkbox(label: str, key: str, default: bool = False, help_text: str 
     st.checkbox(label, key=key, help=help_text)
 
 
-
-def render_record_detail(record: dict[str, Any]) -> None:
-    """Render a record in a human-readable format."""
-    detail = record.get('detail', record)
-    general = detail.get('general', {})
-
-    created = detail.get('created_at', '')
-    updated = detail.get('updated_at', '')
-    if created or updated:
-        ts_parts = []
-        if created:
-            ts_parts.append(f"Created: {created}")
-        if updated:
-            ts_parts.append(f"Updated: {updated}")
-        st.caption(' | '.join(ts_parts))
-
-    st.markdown('#### General')
-    info_cols = st.columns(3)
-    info_cols[0].markdown(f"**Resolution:** {general.get('resolution_number', '—')}")
-    info_cols[1].markdown(f"**Date:** {general.get('date', '—')}")
-    info_cols[2].markdown(f"**Meeting:** {general.get('meeting_number') or '—'}")
-    st.markdown(f"**Title:** {general.get('resolution_title', '—')}")
-    url = general.get('un_document_url', '')
-    if url:
-        st.markdown(f"**URL:** [{url}]({url})")
-    geo = general.get('geographical_locations', [])
-    if geo:
-        st.markdown(f"**Geographical locations:** {', '.join(geo)}")
-    threat = general.get('threat_level')
-    if threat:
-        st.markdown(f"**Threat level:** {threat}")
-    charter = general.get('charter_invoked', [])
-    if charter:
-        st.markdown(f"**Charter invoked:** {', '.join(charter)}")
-    for ref_key, ref_label in [('references_resolutions', 'References (resolutions)'), ('references_prst', 'References (PRST)'), ('references_other', 'References (other)')]:
-        refs = general.get(ref_key, [])
-        if refs:
-            st.markdown(f"**{ref_label}:** {', '.join(str(r) for r in refs)}")
-    referrals = general.get('referrals', '')
-    if referrals:
-        st.markdown(f"**Referrals:** {referrals}")
-
-    for idx, blk in enumerate(detail.get('sanctions', []), 1):
-        st.markdown(f'#### Sanctions #{idx}')
-        mod = blk.get('modified_resolution', {})
-        if mod.get('enabled'):
-            st.markdown(f"**Modified resolution:** {mod.get('resolution_number', '—')}")
-        for items_key, items_label in [('items_regulated_inbound', 'Inbound'), ('items_regulated_outbound', 'Outbound'), ('items_regulated_domestic', 'Domestic')]:
-            items = blk.get(items_key, [])
-            if items:
-                st.markdown(f"**Items regulated ({items_label}):** {', '.join(items)}")
-        exc = blk.get('exceptions', [])
-        if exc:
-            st.markdown(f"**Exceptions:** {', '.join(exc)}")
-        targets = []
-        if blk.get('target_comprehensive'):
-            targets.append('Comprehensive')
-        if blk.get('target_region'):
-            targets.append(f"Region: {blk['target_region']}")
-        if blk.get('target_state'):
-            targets.append(f"State: {', '.join(blk['target_state'])}")
-        if blk.get('target_non_state'):
-            targets.append(f"Non-state: {blk['target_non_state']}")
-        if blk.get('target_entities_business'):
-            targets.append(f"Entities: {blk['target_entities_business']}")
-        if blk.get('target_individual'):
-            targets.append(f"Individual: {blk['target_individual']}")
-        if targets:
-            st.markdown(f"**Target:** {' | '.join(targets)}")
-        reason = blk.get('reason', [])
-        if reason:
-            st.markdown(f"**Reason:** {', '.join(reason)}")
-        status_parts = []
-        if blk.get('sanctions_status'):
-            status_parts.append(blk['sanctions_status'])
-        if blk.get('sanctions_change'):
-            status_parts.append(blk['sanctions_change'])
-        if status_parts:
-            st.markdown(f"**Status:** {' / '.join(status_parts)}")
-        tp = blk.get('sanctions_time_period', {})
-        if tp.get('mode'):
-            tp_str = tp['mode']
-            if tp.get('duration_value'):
-                tp_str += f" {tp['duration_value']} {tp.get('duration_unit', '')}"
-            if tp.get('until_date'):
-                tp_str += f" {tp['until_date']}"
-            st.markdown(f"**Time period:** {tp_str}")
-
-    for idx, blk in enumerate(detail.get('un_peace_operations', []), 1):
-        st.markdown(f'#### UN Peace Operation #{idx}')
-        for field, label in [('operation_type', 'Type'), ('mission_name', 'Mission'), ('mission_activity', 'Activity'), ('mission_activation_termination', 'Status')]:
-            val = blk.get(field)
-            if val:
-                st.markdown(f"**{label}:** {val}")
-        personnel = blk.get('deployed_personnel_levels', {})
-        parts = [f"{k}: {v}" for k, v in personnel.items() if v not in (None, '', 0)]
-        if parts:
-            st.markdown(f"**Personnel:** {' | '.join(parts)}")
-        if blk.get('change_in_authorized_strength'):
-            st.markdown(f"**Strength change:** {blk['change_in_authorized_strength']}")
-        if blk.get('authorization_level_all_necessary_measures'):
-            st.markdown('**Authorization level:** All necessary measures')
-        mandate = blk.get('mandate', [])
-        if mandate:
-            st.markdown(f"**Mandate:** {', '.join(mandate)}")
-
-    for idx, blk in enumerate(detail.get('non_un_operations_enforcement_actions', []), 1):
-        st.markdown(f'#### Non-UN Operation #{idx}')
-        for field, label in [('mission_name', 'Mission'), ('authorization_action', 'Action'), ('authorization_activation_termination', 'Status')]:
-            val = blk.get(field)
-            if val:
-                st.markdown(f"**{label}:** {val}")
-        personnel = blk.get('deployed_personnel_levels', {})
-        parts = [f"{k}: {v}" for k, v in personnel.items() if v not in (None, '', 0)]
-        if parts:
-            st.markdown(f"**Personnel:** {' | '.join(parts)}")
-
-    tribunals = detail.get('criminal_tribunals', {}).get('tribunal_name', [])
-    if tribunals:
-        st.markdown(f"#### Criminal Tribunals\n**{', '.join(tribunals)}**")
-    organs = detail.get('other_subsidiary_organs', {}).get('subsidiary_organ_type', [])
-    if organs:
-        st.markdown(f"#### Other Subsidiary Organs\n**{', '.join(organs)}**")
-    theme = detail.get('thematic_resolutions', {}).get('theme', '')
-    if theme:
-        st.markdown(f"#### Thematic Resolutions\n**Theme:** {theme}")
-    members = detail.get('membership', {}).get('new_member_name', [])
-    if members:
-        st.markdown(f"#### Membership\n**New members:** {', '.join(members)}")
-    appt = detail.get('appointment_related', {}).get('organization', [])
-    if appt:
-        st.markdown(f"#### Appointment Related\n**Organization:** {', '.join(appt)}")
-    note = detail.get('other', {}).get('note', '')
-    annex = detail.get('other', {}).get('annex_attached', False)
-    if note or annex:
-        st.markdown('#### Other')
-        if note:
-            st.markdown(f"**Note:** {note}")
-        if annex:
-            st.markdown('**Annex attached:** Yes')
+def custom_state_key(prefix: str, field_key: str) -> str:
+    return f'{prefix}_custom_{field_key}'
 
 
-def render_remove_button(label: str, key: str) -> bool:
-    cols = st.columns([4, 1])
-    with cols[1]:
-        st.markdown('<div class="remove-block-wrapper">', unsafe_allow_html=True)
-        clicked = st.button(label, key=key)
-        st.markdown('</div>', unsafe_allow_html=True)
-    return clicked
+def render_custom_fields(category: str, target: dict[str, Any], key_prefix: str) -> None:
+    fields = get_category_fields(get_runtime_schema(), category)
+    if not fields:
+        return
+    custom = target.get(CUSTOM_KEY, {}) if isinstance(target, dict) else {}
+    st.markdown('**追加項目**')
+    for field in fields:
+        field_key = field['key']
+        state_key = custom_state_key(key_prefix, field_key)
+        default = custom.get(field_key, default_value_for_field(field))
+        help_text = field.get('help') or None
+        if field['type'] == 'textarea':
+            render_text_area(field['label'], state_key, default, help_text)
+        elif field['type'] in {'text', 'int', 'date'}:
+            render_text(field['label'], state_key, default, help_text)
+        elif field['type'] == 'bool':
+            render_checkbox(field['label'], state_key, bool(default), help_text)
+        elif field['type'] == 'select':
+            render_select(field['label'], state_key, field.get('options', []), default, help_text)
+        elif field['type'] == 'multiselect':
+            render_multiselect(field['label'], state_key, field.get('options', []), default or [], help_text)
+
+
+def materialize_custom_fields(category: str, key_prefix: str, seed_custom: dict[str, Any] | None = None) -> dict[str, Any]:
+    seed_custom = seed_custom or {}
+    fields = get_category_fields(get_runtime_schema(), category)
+    result: dict[str, Any] = {}
+    for field in fields:
+        field_key = field['key']
+        state_key = custom_state_key(key_prefix, field_key)
+        if field['type'] == 'multiselect':
+            result[field_key] = st.session_state.get(state_key, list(seed_custom.get(field_key, [])))
+        elif field['type'] == 'bool':
+            result[field_key] = st.session_state.get(state_key, bool(seed_custom.get(field_key, False)))
+        elif field['type'] == 'select':
+            result[field_key] = st.session_state.get(state_key, seed_custom.get(field_key))
+        else:
+            result[field_key] = st.session_state.get(state_key, display_text(seed_custom.get(field_key, '')))
+    return result
+
+
+
+def record_label(public_record: dict[str, Any]) -> str:
+    resolution = public_record.get('resolution_number') or '未設定'
+    date_value = public_record.get('date') or '日付未設定'
+    title = public_record.get('resolution_title') or 'タイトル未設定'
+    suffix = str(public_record.get('record_id', ''))[:8]
+    return f'{resolution} | {date_value} | {title} | {suffix}'
+
 
 
 def render_dynamic_string_list(title: str, list_key: str, values: list[Any]) -> None:
     st.markdown(f'**{title}**')
     if not values:
-        st.caption('No items')
+        st.caption('項目なし')
     for idx, value in enumerate(values):
         cols = st.columns([5, 1])
         with cols[0]:
             render_text(f'{title} #{idx + 1}', f'{list_key}_{idx}', value)
         with cols[1]:
-            if st.button('Remove', key=f'remove_{list_key}_{idx}'):
+            if st.button('削除', key=f'remove_{list_key}_{idx}'):
                 current = materialize_current_record()
                 target = current['general'][list_key]
                 if idx < len(target):
@@ -310,7 +208,7 @@ def render_dynamic_string_list(title: str, list_key: str, values: list[Any]) -> 
                 st.session_state.current_record = current
                 clear_editor_widget_state()
                 st.rerun()
-    if st.button(f'Add {title}', key=f'add_{list_key}'):
+    if st.button(f'{title} を追加', key=f'add_{list_key}'):
         current = materialize_current_record()
         current['general'][list_key].append('')
         st.session_state.current_record = current
@@ -322,16 +220,16 @@ def render_dynamic_string_list(title: str, list_key: str, values: list[Any]) -> 
 def render_general_section(record: dict[str, Any]) -> None:
     general = record['general']
     st.subheader('General')
-    render_text('UN document URL *', 'editor_general_un_document_url', general.get('un_document_url'), 'Required. Full URL starting with https://  e.g. https://undocs.org/S/RES/2374(2017)')
+    render_text('UN document URL', 'editor_general_un_document_url', general.get('un_document_url'), '検索結果から遷移する国連ページのURL')
     cols = st.columns(3)
     with cols[0]:
-        render_text('Resolution number *', 'editor_general_resolution_number', general.get('resolution_number'), 'Required. Integer, e.g. 2374')
+        render_text('Resolution number', 'editor_general_resolution_number', general.get('resolution_number'))
     with cols[1]:
-        render_text('Date *', 'editor_general_date', general.get('date'), 'Required. YYYYMMDD or YYYY-MM-DD e.g. 20170905')
+        render_text('Date', 'editor_general_date', general.get('date'), 'YYYY-MM-DD または DD/MM/YYYY')
     with cols[2]:
-        render_text('Meeting number', 'editor_general_meeting_number', general.get('meeting_number'), 'Integer, e.g. 8040')
+        render_text('Meeting number', 'editor_general_meeting_number', general.get('meeting_number'))
     render_multiselect('Geographical location', 'editor_general_geographical_locations', COUNTRY_REGION_OPTIONS, general.get('geographical_locations', []))
-    render_text('Resolution title *', 'editor_general_resolution_title', general.get('resolution_title'), 'Required. e.g. The situation in Mali')
+    render_text('Resolution title', 'editor_general_resolution_title', general.get('resolution_title'))
     render_dynamic_string_list('References (resolutions)', 'references_resolutions', general.get('references_resolutions', []))
     render_dynamic_string_list('References (PRST)', 'references_prst', general.get('references_prst', []))
     render_dynamic_string_list('References (other)', 'references_other', general.get('references_other', []))
@@ -341,33 +239,34 @@ def render_general_section(record: dict[str, Any]) -> None:
     with cols[1]:
         render_multiselect('Charter invoked', 'editor_general_charter_invoked', CHARTER_INVOKED_OPTIONS, general.get('charter_invoked', []))
     render_text('Referrals', 'editor_general_referrals', general.get('referrals'))
+    render_custom_fields('general', general, 'editor_general')
 
 
 
 def render_time_period(prefix: str, title: str, current: dict[str, Any]) -> None:
     st.markdown(f'**{title}**')
-    render_select('Mode', f'{prefix}_mode', TIME_PERIOD_MODE_OPTIONS, display_mode(current.get('mode')), 'Select how the time period is defined')
+    render_select('Mode', f'{prefix}_mode', TIME_PERIOD_MODE_OPTIONS, display_mode(current.get('mode')))
     mode = st.session_state.get(f'{prefix}_mode')
     if mode in {'Established for', 'Extended for'}:
         cols = st.columns(2)
         with cols[0]:
-            render_text('Duration value', f'{prefix}_duration_value', current.get('duration_value'), 'Required for this mode. Integer, e.g. 12')
+            render_text('Duration value', f'{prefix}_duration_value', current.get('duration_value'))
         with cols[1]:
-            render_select('Duration unit', f'{prefix}_duration_unit', DURATION_UNIT_OPTIONS, current.get('duration_unit'), 'Required for this mode')
+            render_select('Duration unit', f'{prefix}_duration_unit', DURATION_UNIT_OPTIONS, current.get('duration_unit'))
     elif mode in {'Established until', 'Extended until'}:
-        render_text('Until date', f'{prefix}_until_date', current.get('until_date'), 'Required for this mode. YYYYMMDD or YYYY-MM-DD e.g. 20180630')
+        render_text('Until date', f'{prefix}_until_date', current.get('until_date'), 'YYYY-MM-DD または DD/MM/YYYY')
 
 
 
 def render_sanctions(record: dict[str, Any]) -> None:
     st.subheader('Sanctions')
     if not record['sanctions']:
-        st.caption('No blocks')
+        st.caption('ブロックなし')
     for idx, block in enumerate(record['sanctions']):
         with st.expander(f'Sanctions #{idx + 1}', expanded=True):
-            render_checkbox('Modified resolution', f'editor_sanctions_{idx}_modified_enabled', block.get('modified_resolution', {}).get('enabled', False), 'Check if this modifies an existing resolution')
+            render_checkbox('Modified resolution', f'editor_sanctions_{idx}_modified_enabled', block.get('modified_resolution', {}).get('enabled', False))
             if st.session_state.get(f'editor_sanctions_{idx}_modified_enabled'):
-                render_text('Modified resolution number', f'editor_sanctions_{idx}_modified_resolution_number', block.get('modified_resolution', {}).get('resolution_number'), 'Required when checked. Integer, e.g. 2374')
+                render_text('Modified resolution number', f'editor_sanctions_{idx}_modified_resolution_number', block.get('modified_resolution', {}).get('resolution_number'))
             render_multiselect('Items regulated (inbound)', f'editor_sanctions_{idx}_items_regulated_inbound', ITEMS_REGULATED_INBOUND_OPTIONS, block.get('items_regulated_inbound', []))
             render_multiselect('Items regulated (outbound)', f'editor_sanctions_{idx}_items_regulated_outbound', ITEMS_REGULATED_OUTBOUND_OPTIONS, block.get('items_regulated_outbound', []))
             render_multiselect('Items regulated (domestic)', f'editor_sanctions_{idx}_items_regulated_domestic', ITEMS_REGULATED_DOMESTIC_OPTIONS, block.get('items_regulated_domestic', []))
@@ -385,16 +284,17 @@ def render_sanctions(record: dict[str, Any]) -> None:
             with cols[1]:
                 render_select('Sanctions change', f'editor_sanctions_{idx}_sanctions_change', SANCTIONS_CHANGE_OPTIONS, block.get('sanctions_change'))
             render_time_period(f'editor_sanctions_{idx}_time_period', 'Sanctions (time period)', block.get('sanctions_time_period', {}))
-            if render_remove_button('Remove this Sanctions block', f'remove_sanctions_block_{idx}'):
+            render_custom_fields('sanctions', block, f'editor_sanctions_{idx}')
+            if st.button('この Sanctions ブロックを削除', key=f'remove_sanctions_block_{idx}'):
                 current = materialize_current_record()
                 current['sanctions'].pop(idx)
                 st.session_state.current_record = current
                 clear_editor_widget_state()
                 st.rerun()
-    if st.button('Add Sanctions block', key='add_sanctions_block'):
+    if st.button('Sanctions ブロックを追加', key='add_sanctions_block'):
         current = materialize_current_record()
         current['sanctions'].append(default_sanction_block())
-        st.session_state.current_record = current
+        st.session_state.current_record = ensure_custom_defaults(current, get_runtime_schema())
         clear_editor_widget_state()
         st.rerun()
 
@@ -403,7 +303,7 @@ def render_sanctions(record: dict[str, Any]) -> None:
 def render_un_peace_operations(record: dict[str, Any]) -> None:
     st.subheader('UN peace operations')
     if not record['un_peace_operations']:
-        st.caption('No blocks')
+        st.caption('ブロックなし')
     for idx, block in enumerate(record['un_peace_operations']):
         with st.expander(f'UN peace operation #{idx + 1}', expanded=True):
             render_select('Operation type', f'editor_un_peace_{idx}_operation_type', PKO_OPERATION_TYPE_OPTIONS, block.get('operation_type'))
@@ -414,31 +314,32 @@ def render_un_peace_operations(record: dict[str, Any]) -> None:
             st.markdown('**Deployed personnel levels**')
             cols = st.columns(4)
             with cols[0]:
-                render_text('Military', f'editor_un_peace_{idx}_military', block.get('deployed_personnel_levels', {}).get('military'), 'Integer, e.g. 13289')
+                render_text('Military', f'editor_un_peace_{idx}_military', block.get('deployed_personnel_levels', {}).get('military'))
             with cols[1]:
-                render_text('Police', f'editor_un_peace_{idx}_police', block.get('deployed_personnel_levels', {}).get('police'), 'Integer, e.g. 1920')
+                render_text('Police', f'editor_un_peace_{idx}_police', block.get('deployed_personnel_levels', {}).get('police'))
             with cols[2]:
-                render_text('Civilian', f'editor_un_peace_{idx}_civilian', block.get('deployed_personnel_levels', {}).get('civilian'), 'Integer')
+                render_text('Civilian', f'editor_un_peace_{idx}_civilian', block.get('deployed_personnel_levels', {}).get('civilian'))
             with cols[3]:
-                render_text('Other', f'editor_un_peace_{idx}_other', block.get('deployed_personnel_levels', {}).get('other'), 'Integer')
+                render_text('Other', f'editor_un_peace_{idx}_other', block.get('deployed_personnel_levels', {}).get('other'))
             render_text('Description', f'editor_un_peace_{idx}_description', block.get('description'))
             render_select('Change in authorized strength', f'editor_un_peace_{idx}_change_in_authorized_strength', AUTHORIZED_STRENGTH_CHANGE_OPTIONS, block.get('change_in_authorized_strength'))
             render_multiselect('Collaboration', f'editor_un_peace_{idx}_collaboration', PKO_COLLABORATION_OPTIONS, block.get('collaboration', []))
             render_select('Inter-mission loan/transfer', f'editor_un_peace_{idx}_transfer_direction', INTER_MISSION_TRANSFER_DIRECTION_OPTIONS, display_direction(block.get('inter_mission_loan_transfer', {}).get('direction')))
             if st.session_state.get(f'editor_un_peace_{idx}_transfer_direction'):
-                render_text('Transfer target', f'editor_un_peace_{idx}_transfer_target', block.get('inter_mission_loan_transfer', {}).get('target'), 'Required when direction is selected')
+                render_text('Transfer target', f'editor_un_peace_{idx}_transfer_target', block.get('inter_mission_loan_transfer', {}).get('target'))
             render_checkbox('Authorization level (all necessary measures)', f'editor_un_peace_{idx}_authorization_level', block.get('authorization_level_all_necessary_measures', False))
             render_multiselect('Mandate', f'editor_un_peace_{idx}_mandate', PKO_MANDATE_OPTIONS, block.get('mandate', []))
-            if render_remove_button('Remove this UN peace operations block', f'remove_un_peace_block_{idx}'):
+            render_custom_fields('un_peace_operations', block, f'editor_un_peace_{idx}')
+            if st.button('この UN peace operations ブロックを削除', key=f'remove_un_peace_block_{idx}'):
                 current = materialize_current_record()
                 current['un_peace_operations'].pop(idx)
                 st.session_state.current_record = current
                 clear_editor_widget_state()
                 st.rerun()
-    if st.button('Add UN peace operations block', key='add_un_peace_block'):
+    if st.button('UN peace operations ブロックを追加', key='add_un_peace_block'):
         current = materialize_current_record()
         current['un_peace_operations'].append(default_un_peace_operation_block())
-        st.session_state.current_record = current
+        st.session_state.current_record = ensure_custom_defaults(current, get_runtime_schema())
         clear_editor_widget_state()
         st.rerun()
 
@@ -447,7 +348,7 @@ def render_un_peace_operations(record: dict[str, Any]) -> None:
 def render_non_un_operations(record: dict[str, Any]) -> None:
     st.subheader('Non-UN operations/enforcement actions')
     if not record['non_un_operations_enforcement_actions']:
-        st.caption('No blocks')
+        st.caption('ブロックなし')
     for idx, block in enumerate(record['non_un_operations_enforcement_actions']):
         with st.expander(f'Non-UN operation #{idx + 1}', expanded=True):
             render_select('Mission name', f'editor_non_un_{idx}_mission_name', NON_UN_MISSION_NAME_OPTIONS, block.get('mission_name'))
@@ -457,28 +358,29 @@ def render_non_un_operations(record: dict[str, Any]) -> None:
             st.markdown('**Deployed personnel levels**')
             cols = st.columns(4)
             with cols[0]:
-                render_text('Military', f'editor_non_un_{idx}_military', block.get('deployed_personnel_levels', {}).get('military'), 'Integer')
+                render_text('Military', f'editor_non_un_{idx}_military', block.get('deployed_personnel_levels', {}).get('military'))
             with cols[1]:
-                render_text('Police', f'editor_non_un_{idx}_police', block.get('deployed_personnel_levels', {}).get('police'), 'Integer')
+                render_text('Police', f'editor_non_un_{idx}_police', block.get('deployed_personnel_levels', {}).get('police'))
             with cols[2]:
-                render_text('Civilian', f'editor_non_un_{idx}_civilian', block.get('deployed_personnel_levels', {}).get('civilian'), 'Integer')
+                render_text('Civilian', f'editor_non_un_{idx}_civilian', block.get('deployed_personnel_levels', {}).get('civilian'))
             with cols[3]:
-                render_text('Other', f'editor_non_un_{idx}_other', block.get('deployed_personnel_levels', {}).get('other'), 'Integer')
+                render_text('Other', f'editor_non_un_{idx}_other', block.get('deployed_personnel_levels', {}).get('other'))
             render_text('Description', f'editor_non_un_{idx}_description', block.get('description'))
             render_select('Change in authorized strength', f'editor_non_un_{idx}_change_in_authorized_strength', AUTHORIZED_STRENGTH_CHANGE_OPTIONS, block.get('change_in_authorized_strength'))
             render_multiselect('Collaboration', f'editor_non_un_{idx}_collaboration', NON_UN_COLLABORATION_OPTIONS, block.get('collaboration', []))
             render_checkbox('Authorization level (all necessary measures)', f'editor_non_un_{idx}_authorization_level', block.get('authorization_level_all_necessary_measures', False))
             render_multiselect('Mandate', f'editor_non_un_{idx}_mandate', NON_UN_MANDATE_OPTIONS, block.get('mandate', []))
-            if render_remove_button('Remove this Non-UN operations block', f'remove_non_un_block_{idx}'):
+            render_custom_fields('non_un_operations_enforcement_actions', block, f'editor_non_un_{idx}')
+            if st.button('この Non-UN operations ブロックを削除', key=f'remove_non_un_block_{idx}'):
                 current = materialize_current_record()
                 current['non_un_operations_enforcement_actions'].pop(idx)
                 st.session_state.current_record = current
                 clear_editor_widget_state()
                 st.rerun()
-    if st.button('Add Non-UN operations block', key='add_non_un_block'):
+    if st.button('Non-UN operations ブロックを追加', key='add_non_un_block'):
         current = materialize_current_record()
         current['non_un_operations_enforcement_actions'].append(default_non_un_operation_block())
-        st.session_state.current_record = current
+        st.session_state.current_record = ensure_custom_defaults(current, get_runtime_schema())
         clear_editor_widget_state()
         st.rerun()
 
@@ -487,23 +389,29 @@ def render_non_un_operations(record: dict[str, Any]) -> None:
 def render_single_sections(record: dict[str, Any]) -> None:
     st.subheader('Criminal Tribunals')
     render_multiselect('Tribunal name', 'editor_criminal_tribunals_tribunal_name', TRIBUNAL_NAME_OPTIONS, record.get('criminal_tribunals', {}).get('tribunal_name', []))
+    render_custom_fields('criminal_tribunals', record.get('criminal_tribunals', {}), 'editor_criminal_tribunals')
 
     st.subheader('Other subsidiary organs')
     render_multiselect('Subsidiary organ type', 'editor_other_subsidiary_organs_subsidiary_organ_type', SUBSIDIARY_ORGAN_TYPE_OPTIONS, record.get('other_subsidiary_organs', {}).get('subsidiary_organ_type', []))
+    render_custom_fields('other_subsidiary_organs', record.get('other_subsidiary_organs', {}), 'editor_other_subsidiary_organs')
 
     st.subheader('Thematic resolutions')
     render_text('Theme', 'editor_thematic_resolutions_theme', record.get('thematic_resolutions', {}).get('theme', ''))
+    render_custom_fields('thematic_resolutions', record.get('thematic_resolutions', {}), 'editor_thematic_resolutions')
 
     st.subheader('Membership')
     render_multiselect('New member name', 'editor_membership_new_member_name', COUNTRY_REGION_OPTIONS, record.get('membership', {}).get('new_member_name', []))
     render_text('Other membership issue', 'editor_membership_other_membership_issue', record.get('membership', {}).get('other_membership_issue', ''))
+    render_custom_fields('membership', record.get('membership', {}), 'editor_membership')
 
     st.subheader('Appointment related')
     render_multiselect('Organization', 'editor_appointment_related_organization', APPOINTMENT_ORGANIZATION_OPTIONS, record.get('appointment_related', {}).get('organization', []))
+    render_custom_fields('appointment_related', record.get('appointment_related', {}), 'editor_appointment_related')
 
     st.subheader('Other')
     render_text_area('Note', 'editor_other_note', record.get('other', {}).get('note', ''))
     render_checkbox('Annex attached', 'editor_other_annex_attached', record.get('other', {}).get('annex_attached', False))
+    render_custom_fields('other', record.get('other', {}), 'editor_other')
 
 
 
@@ -524,6 +432,7 @@ def materialize_current_record() -> dict[str, Any]:
     record['general']['threat_level'] = st.session_state.get('editor_general_threat_level')
     record['general']['charter_invoked'] = st.session_state.get('editor_general_charter_invoked', [])
     record['general']['referrals'] = st.session_state.get('editor_general_referrals', '')
+    record['general'][CUSTOM_KEY] = materialize_custom_fields('general', 'editor_general', seed['general'].get(CUSTOM_KEY, {}))
 
     record['sanctions'] = []
     for idx in range(len(seed['sanctions'])):
@@ -549,6 +458,7 @@ def materialize_current_record() -> dict[str, Any]:
             'duration_unit': st.session_state.get(f'editor_sanctions_{idx}_time_period_duration_unit'),
             'until_date': st.session_state.get(f'editor_sanctions_{idx}_time_period_until_date', ''),
         }
+        block[CUSTOM_KEY] = materialize_custom_fields('sanctions', f'editor_sanctions_{idx}', seed['sanctions'][idx].get(CUSTOM_KEY, {}))
         record['sanctions'].append(block)
 
     record['un_peace_operations'] = []
@@ -579,6 +489,7 @@ def materialize_current_record() -> dict[str, Any]:
         }
         block['authorization_level_all_necessary_measures'] = st.session_state.get(f'editor_un_peace_{idx}_authorization_level', False)
         block['mandate'] = st.session_state.get(f'editor_un_peace_{idx}_mandate', [])
+        block[CUSTOM_KEY] = materialize_custom_fields('un_peace_operations', f'editor_un_peace_{idx}', seed['un_peace_operations'][idx].get(CUSTOM_KEY, {}))
         record['un_peace_operations'].append(block)
 
     record['non_un_operations_enforcement_actions'] = []
@@ -604,54 +515,37 @@ def materialize_current_record() -> dict[str, Any]:
         block['collaboration'] = st.session_state.get(f'editor_non_un_{idx}_collaboration', [])
         block['authorization_level_all_necessary_measures'] = st.session_state.get(f'editor_non_un_{idx}_authorization_level', False)
         block['mandate'] = st.session_state.get(f'editor_non_un_{idx}_mandate', [])
+        block[CUSTOM_KEY] = materialize_custom_fields('non_un_operations_enforcement_actions', f'editor_non_un_{idx}', seed['non_un_operations_enforcement_actions'][idx].get(CUSTOM_KEY, {}))
         record['non_un_operations_enforcement_actions'].append(block)
 
     record['criminal_tribunals']['tribunal_name'] = st.session_state.get('editor_criminal_tribunals_tribunal_name', [])
+    record['criminal_tribunals'][CUSTOM_KEY] = materialize_custom_fields('criminal_tribunals', 'editor_criminal_tribunals', seed['criminal_tribunals'].get(CUSTOM_KEY, {}))
     record['other_subsidiary_organs']['subsidiary_organ_type'] = st.session_state.get('editor_other_subsidiary_organs_subsidiary_organ_type', [])
+    record['other_subsidiary_organs'][CUSTOM_KEY] = materialize_custom_fields('other_subsidiary_organs', 'editor_other_subsidiary_organs', seed['other_subsidiary_organs'].get(CUSTOM_KEY, {}))
     record['thematic_resolutions']['theme'] = st.session_state.get('editor_thematic_resolutions_theme', '')
+    record['thematic_resolutions'][CUSTOM_KEY] = materialize_custom_fields('thematic_resolutions', 'editor_thematic_resolutions', seed['thematic_resolutions'].get(CUSTOM_KEY, {}))
     record['membership']['new_member_name'] = st.session_state.get('editor_membership_new_member_name', [])
     record['membership']['other_membership_issue'] = st.session_state.get('editor_membership_other_membership_issue', '')
+    record['membership'][CUSTOM_KEY] = materialize_custom_fields('membership', 'editor_membership', seed['membership'].get(CUSTOM_KEY, {}))
     record['appointment_related']['organization'] = st.session_state.get('editor_appointment_related_organization', [])
+    record['appointment_related'][CUSTOM_KEY] = materialize_custom_fields('appointment_related', 'editor_appointment_related', seed['appointment_related'].get(CUSTOM_KEY, {}))
     record['other']['note'] = st.session_state.get('editor_other_note', '')
     record['other']['annex_attached'] = st.session_state.get('editor_other_annex_attached', False)
+    record['other'][CUSTOM_KEY] = materialize_custom_fields('other', 'editor_other', seed['other'].get(CUSTOM_KEY, {}))
     return record
 
 
 
-FILTER_KEYS = ['filter_resolution', 'filter_year', 'filter_geo', 'filter_category', 'filter_tag']
-
-
-def _clear_filters() -> None:
-    for key in FILTER_KEYS:
-        if key in st.session_state:
-            del st.session_state[key]
-    st.session_state['filter_applied'] = False
-
-
-def _apply_filters() -> None:
-    st.session_state['filter_applied'] = True
-
-
 def run_filters(public_records: list[dict[str, Any]]) -> list[dict[str, Any]]:
-    resolution_filter = st.text_input('Resolution number', key='filter_resolution')
-    filter_cols = st.columns(4)
+    resolution_filter = st.sidebar.text_input('Resolution number filter', key='filter_resolution')
     years = sorted({rec['year'] for rec in public_records if rec.get('year') is not None})
-    year_filter = filter_cols[0].multiselect('Year', years, key='filter_year')
+    year_filter = st.sidebar.multiselect('Year', years, key='filter_year')
     geo_options = sorted({geo for rec in public_records for geo in rec.get('geographical_locations', [])})
-    geo_filter = filter_cols[1].multiselect('Geographical location', geo_options, key='filter_geo')
+    geo_filter = st.sidebar.multiselect('Geographical location', geo_options, key='filter_geo')
     category_options = sorted({cat for rec in public_records for cat in rec.get('categories_present', [])})
-    category_filter = filter_cols[2].multiselect('Category', category_options, key='filter_category')
+    category_filter = st.sidebar.multiselect('Category', category_options, key='filter_category')
     tag_options = sorted({tag for rec in public_records for tag in rec.get('tag_filters', [])})
-    tag_filter = filter_cols[3].multiselect('Tag', tag_options, key='filter_tag')
-
-    btn_cols = st.columns([1, 1, 4])
-    with btn_cols[0]:
-        st.button('Search', key='filter_search', on_click=_apply_filters, type='primary')
-    with btn_cols[1]:
-        st.button('Clear all', key='filter_clear', on_click=_clear_filters)
-
-    if not st.session_state.get('filter_applied', False):
-        return public_records
+    tag_filter = st.sidebar.multiselect('Tag', tag_options, key='filter_tag')
 
     results = []
     for rec in public_records:
@@ -671,300 +565,225 @@ def run_filters(public_records: list[dict[str, Any]]) -> list[dict[str, Any]]:
 
 
 
-TAB_LIST = '📋 List'
-TAB_EDITOR = '✏️ Edit'
-TAB_HELP = 'Help'
-TAB_KEY = 'active_view'
-
-
-def _switch_to_editor(record: dict[str, Any]) -> None:
-    """Callback — must be used via on_click so state is set before widget renders."""
-    load_record_into_editor(record)
-    st.session_state[TAB_KEY] = TAB_EDITOR
-
-
 def main() -> None:
     ensure_data_files()
     st.title('UNSC Metadata Backend')
-    st.caption('Register, edit, search, and export metadata as public JSON')
+    st.caption('リンク付きメタデータの登録・修正・検索・公開用JSON生成')
+    st.caption(f'追加項目は {SCHEMA_OVERRIDES_PATH.name} で定義できます。')
+
+    with st.expander('Help / 使い方', expanded=False):
+        col_ja, col_en = st.columns(2)
+        with col_ja:
+            st.markdown('''
+### 使い方
+
+**登録したい場合**
+1. 「新規作成」ボタンをクリック
+2. 必須項目（URL・決議番号・日付・タイトル）を入力
+3. 「保存」をクリック
+
+**編集したい場合**
+1. ドロップダウンから対象レコードを選択
+2. 「選択読込」をクリック
+3. 内容を変更して「保存」
+
+**検索・絞り込みたい場合**
+- 左のサイドバーから地域・カテゴリ等でフィルタ可能
+
+**公開JSONを出力したい場合**
+- 「公開JSON再生成」ボタンをクリック
+- `data/public_records.json` が更新される
+
+**削除したい場合**
+- UIに削除機能はありません（誤操作防止）
+- 管理者が `data/records.json` を直接編集してください
+
+---
+
+**追加項目（拡張機能）**
+
+`data/schema_overrides.json` を編集することで、固定フォームを変更せずに独自の入力項目を追加できます。
+
+形式例：
+```json
+{
+  "categories": {
+    "general": [
+      {
+        "key": "my_field",
+        "label": "独自項目",
+        "type": "text",
+        "required": false,
+        "searchable": false
+      }
+    ]
+  }
+}
+```
+
+- `type`: `text` / `textarea` / `boolean` / `integer` / `date` / `select` / `multiselect`
+- `searchable: true` にすると `tag_filters` に含まれ公開JSON側で検索可能になる
+- `select` / `multiselect` は `options` リストも必須
+- 変更後はアプリを再起動してください
+''')
+        with col_en:
+            st.markdown('''
+### How to Use
+
+**Register a new record**
+1. Click "新規作成" (New)
+2. Fill in required fields: URL, Resolution number, Date, Title
+3. Click "保存" (Save)
+
+**Edit an existing record**
+1. Select the target record from the dropdown
+2. Click "選択読込" (Load)
+3. Modify fields and click "保存" (Save)
+
+**Search / filter records**
+- Use the sidebar on the left to filter by region, category, etc.
+
+**Export public JSON**
+- Click "公開JSON再生成" (Regenerate public JSON)
+- Updates `data/public_records.json`
+
+**Delete a record**
+- No delete button in the UI (intentional — prevents accidental loss)
+- Administrator must edit `data/records.json` directly
+
+---
+
+**Custom Fields (Extensible Schema)**
+
+Edit `data/schema_overrides.json` to add custom input fields without touching the core form.
+
+Example:
+```json
+{
+  "categories": {
+    "general": [
+      {
+        "key": "my_field",
+        "label": "My Custom Field",
+        "type": "text",
+        "required": false,
+        "searchable": false
+      }
+    ]
+  }
+}
+```
+
+- `type`: `text` / `textarea` / `boolean` / `integer` / `date` / `select` / `multiselect`
+- `searchable: true` includes the value in `tag_filters` in the public JSON
+- `select` / `multiselect` also require an `options` list
+- Restart the app after editing
+''')
+
+    schema, schema_errors = load_schema_overrides(SCHEMA_OVERRIDES_PATH)
+    if schema_errors:
+        st.error('schema_overrides.json に問題があります。修正後に再実行してください。')
+        for err in schema_errors:
+            st.write(f'- {err}')
+        st.stop()
+    st.session_state['_runtime_custom_schema'] = schema
 
     try:
-        records = load_records()
-        public_records = generate_public_records(records)
+        records = [ensure_custom_defaults(rec, schema) for rec in load_records()]
+        public_records = generate_public_records(records, schema)
     except Exception as exc:
-        st.error('Failed to load saved data. Please check records.json / public_records.json.')
+        st.error('保存データの読み込みに失敗しました。records.json / public_records.json を確認してください。')
         st.code(str(exc))
         st.stop()
     record_by_id = {rec['record_id']: rec for rec in records}
 
-    init_if_missing(TAB_KEY, TAB_LIST)
-    nav_cols = st.columns([1, 1, 3, 1])
-    with nav_cols[0]:
-        st.button(
-            TAB_EDITOR,
-            use_container_width=True,
-            type='primary' if st.session_state[TAB_KEY] == TAB_EDITOR else 'secondary',
-            on_click=lambda: st.session_state.__setitem__(TAB_KEY, TAB_EDITOR),
-            key='nav_editor',
-        )
-    with nav_cols[1]:
-        st.button(
-            TAB_LIST,
-            use_container_width=True,
-            type='primary' if st.session_state[TAB_KEY] == TAB_LIST else 'secondary',
-            on_click=lambda: st.session_state.__setitem__(TAB_KEY, TAB_LIST),
-            key='nav_list',
-        )
-    with nav_cols[3]:
-        st.button(
-            TAB_HELP,
-            use_container_width=True,
-            type='primary' if st.session_state[TAB_KEY] == TAB_HELP else 'secondary',
-            on_click=lambda: st.session_state.__setitem__(TAB_KEY, TAB_HELP),
-            key='nav_help',
-        )
-    active_view = st.session_state[TAB_KEY]
+    st.sidebar.header('Filters')
+    filtered_public = run_filters(public_records)
+    st.sidebar.caption(f'{len(filtered_public)} / {len(public_records)} 件')
 
-    if active_view == TAB_HELP:
-        help_ja, help_en = st.columns(2)
-        with help_ja:
-            st.info(
-                '### 使い方ガイド\n\n'
-                '---\n'
-                '#### 登録したい場合\n'
-                '1. **「✏️ Edit」** ボタンを押す\n'
-                '2. **「New」** を押すと空のフォームが開く\n'
-                '3. `*` 印の必須項目（URL, Resolution number, Date, Title）を入力\n'
-                '4. 必要に応じて **「Add ... block」** で Sanctions / UN peace operations 等を追加\n'
-                '5. **「Save」** を押す → 登録日時が自動で記録される\n\n'
-                '#### 編集したい場合\n'
-                '1. **「📋 List」** ボタンを押す\n'
-                '2. 「Search filters」やソートで対象を探す\n'
-                '3. 対象行の **「Edit」** を押す → フォームに読み込まれる\n'
-                '4. 内容を修正して **「Save」** → 更新日時が自動で記録される\n'
-                '5. やめたい場合は **「Cancel」** で破棄\n\n'
-                '#### 閲覧・確認したい場合\n'
-                '1. **「📋 List」** ボタンを押す\n'
-                '2. 対象行の **「View」** を押すと詳細が展開される\n'
-                '3. **「Close」** で閉じる（上下どちらのボタンでもOK）\n'
-                '4. ソート（Updated / Resolution# / Date）で並べ替え可能\n\n'
-                '#### 削除したい場合\n'
-                '⚠️ **UIに削除ボタンはありません**（誤操作防止のため意図的に省いています）。\n\n'
-                '削除は管理者が `data/records.json` を直接編集して該当レコードを除去してください。'
-                '編集後 **「Download public JSON」** を押して公開用JSONも再生成してください。\n\n'
-                '#### 公開用 JSON をダウンロードする\n'
-                '1. List 画面の **「Download public JSON」** を押す\n'
-                '2. 最新の `public_records.json` が自動生成されてダウンロードされる\n\n'
-                '#### フロントエンドに反映する\n'
-                '1. ダウンロードした **`public_records.json`** を先生に渡す\n'
-                '2. 先生がフロント側のリポジトリにファイルを配置してデプロイ\n'
-                '3. 公開サイトに反映される\n\n'
-                '---\n'
-                '*Save のたびに公開用JSONも自動更新されます。'
-                '登録日時・更新日時は自動で記録されます。*'
-            )
-        with help_en:
-            st.info(
-                '### How to Use\n\n'
-                '---\n'
-                '#### To register a new record\n'
-                '1. Click **"✏️ Edit"**\n'
-                '2. Click **"New"** to open a blank form\n'
-                '3. Fill in the required fields marked with `*` (URL, Resolution number, Date, Title)\n'
-                '4. Optionally click **"Add ... block"** to add Sanctions / UN peace operations sections\n'
-                '5. Click **"Save"** — created timestamp is recorded automatically\n\n'
-                '#### To edit an existing record\n'
-                '1. Click **"📋 List"**\n'
-                '2. Use Search filters or Sort to find the record\n'
-                '3. Click **"Edit"** on the row — the form loads with existing data\n'
-                '4. Modify and click **"Save"** — updated timestamp is recorded automatically\n'
-                '5. Click **"Cancel"** to discard changes\n\n'
-                '#### To view record details\n'
-                '1. Click **"📋 List"**\n'
-                '2. Click **"View"** on any row to expand its details\n'
-                '3. Click **"Close"** (top or bottom) to collapse\n'
-                '4. Use the Sort dropdown (Updated / Resolution# / Date) to reorder\n\n'
-                '#### To delete a record\n'
-                '⚠️ **There is no delete button in the UI** — this is intentional to prevent accidental data loss.\n\n'
-                'To delete, an administrator must manually edit `data/records.json` and remove the record. '
-                'After editing, click **"Download public JSON"** to regenerate the public file.\n\n'
-                '#### To download public JSON\n'
-                '1. On the List view, click **"Download public JSON"**\n'
-                '2. The latest `public_records.json` is auto-generated and downloaded\n\n'
-                '#### To deploy to the frontend\n'
-                '1. Hand the downloaded **`public_records.json`** to Prof. Lim\n'
-                '2. Prof. Lim places the file in the frontend repository and deploys\n'
-                '3. The public site is updated\n\n'
-                '---\n'
-                '*Public JSON is auto-updated on every save. '
-                'Created and updated timestamps are recorded automatically.*'
-            )
+    controls = st.columns([3, 1, 1, 1])
+    selection_options = ['—'] + [record_label(rec) for rec in filtered_public]
+    labels_to_id = {record_label(rec): rec['record_id'] for rec in filtered_public}
+    with controls[0]:
+        selected_label = st.selectbox('編集対象レコード', selection_options, key='selected_record_label')
+    with controls[1]:
+        if st.button('選択読込') and selected_label != '—':
+            load_record_into_editor(record_by_id[labels_to_id[selected_label]])
+            st.rerun()
+    with controls[2]:
+        if st.button('新規作成'):
+            load_record_into_editor(default_record())
+            st.rerun()
+    with controls[3]:
+        if st.button('公開JSON再生成'):
+            try:
+                save_public_records(records, PUBLIC_RECORDS_PATH, schema)
+            except Exception as exc:
+                st.error('公開用JSONの再生成に失敗しました。')
+                st.code(str(exc))
+            else:
+                st.success(f'公開用JSONを再生成しました: {PUBLIC_RECORDS_PATH.name}')
+
+    with st.expander('保存済みレコード一覧', expanded=False):
+        st.dataframe(
+            [
+                {
+                    'Resolution number': rec.get('resolution_number'),
+                    'Date': rec.get('date'),
+                    'Title': rec.get('resolution_title'),
+                    'Geo': ', '.join(rec.get('geographical_locations', [])),
+                    'Categories': ', '.join(rec.get('categories_present', [])),
+                }
+                for rec in filtered_public
+            ],
+            use_container_width=True,
+            hide_index=True,
+        )
+
+    if 'current_record' not in st.session_state:
+        st.info('左上の「新規作成」または「選択読込」から編集を開始してください。')
         return
 
-    # ── List view ──
-    if active_view == TAB_LIST:
-        with st.expander('Search filters', expanded=False):
-            filtered_public = run_filters(public_records)
+    current_record = st.session_state.current_record
+    st.divider()
+    st.header('Editor')
+    render_general_section(current_record)
+    st.divider()
+    render_sanctions(current_record)
+    st.divider()
+    render_un_peace_operations(current_record)
+    st.divider()
+    render_non_un_operations(current_record)
+    st.divider()
+    render_single_sections(current_record)
 
-        sort_cols = st.columns([1, 1, 3])
-        with sort_cols[0]:
-            sort_by = st.selectbox('Sort by', ['Updated (newest)', 'Updated (oldest)', 'Resolution # (asc)', 'Resolution # (desc)', 'Date (newest)', 'Date (oldest)'], key='list_sort', label_visibility='collapsed')
-        sort_map = {
-            'Updated (newest)': lambda r: r.get('updated_at') or '', 'Updated (oldest)': lambda r: r.get('updated_at') or '',
-            'Resolution # (asc)': lambda r: r.get('resolution_number') or 0, 'Resolution # (desc)': lambda r: r.get('resolution_number') or 0,
-            'Date (newest)': lambda r: r.get('date') or '', 'Date (oldest)': lambda r: r.get('date') or '',
-        }
-        reverse = sort_by in ('Updated (newest)', 'Resolution # (desc)', 'Date (newest)')
-        filtered_public = sorted(filtered_public, key=sort_map[sort_by], reverse=reverse)
-
-        header_cols = st.columns([1, 1, 3])
-        with header_cols[0]:
-            st.markdown(f'**{len(filtered_public)}** shown / {len(public_records)} total')
-        with header_cols[1]:
-            try:
-                save_public_records(records, PUBLIC_RECORDS_PATH)
-                public_json = json.dumps(generate_public_records(records), ensure_ascii=False, indent=2)
-            except Exception as exc:
-                st.error('Failed to generate public JSON.')
-                st.code(str(exc))
-                public_json = None
-            if public_json is not None:
-                st.download_button('Download public JSON', data=public_json, file_name='public_records.json', mime='application/json')
-
-        if not filtered_public:
-            st.info('No matching records.')
-        else:
-            PAGE_SIZE = 50
-            total = len(filtered_public)
-            total_pages = max(1, (total + PAGE_SIZE - 1) // PAGE_SIZE)
-            init_if_missing('list_page', 1)
-            current_page = st.session_state['list_page']
-            if current_page > total_pages:
-                current_page = total_pages
-                st.session_state['list_page'] = current_page
-            start = (current_page - 1) * PAGE_SIZE
-            end = min(start + PAGE_SIZE, total)
-            page_records = filtered_public[start:end]
-
-            def render_pagination(suffix: str) -> None:
-                if total_pages <= 1:
-                    return
-                page_cols = st.columns(min(total_pages, 10) + 2)
-                with page_cols[0]:
-                    if current_page > 1:
-                        if st.button('◀', key=f'page_prev_{suffix}'):
-                            st.session_state['list_page'] = current_page - 1
-                            st.session_state['list_open_id'] = None
-                            st.rerun()
-                for p in range(1, min(total_pages + 1, 11)):
-                    with page_cols[p]:
-                        if st.button(str(p), key=f'page_{p}_{suffix}', type='primary' if p == current_page else 'secondary'):
-                            st.session_state['list_page'] = p
-                            st.session_state['list_open_id'] = None
-                            st.rerun()
-                with page_cols[-1]:
-                    if current_page < total_pages:
-                        if st.button('▶', key=f'page_next_{suffix}'):
-                            st.session_state['list_page'] = current_page + 1
-                            st.session_state['list_open_id'] = None
-                            st.rerun()
-                st.caption(f'Page {current_page} / {total_pages}')
-
-            render_pagination('top')
-
-            open_id = st.session_state.get('list_open_id')
-            for row_idx, rec in enumerate(page_records, start=start):
-                rec_id = rec['record_id']
-                res_num = rec.get('resolution_number', '')
-                date = rec.get('date', '')
-                title = rec.get('resolution_title', '') or ''
-                geo = ', '.join(rec.get('geographical_locations', []))
-                row_cols = st.columns([1.2, 1, 3, 2, 0.6, 0.6])
-                with row_cols[0]:
-                    st.text(str(res_num))
-                with row_cols[1]:
-                    st.text(date)
-                with row_cols[2]:
-                    st.text(title)
-                with row_cols[3]:
-                    st.text(geo)
-                with row_cols[4]:
-                    if open_id == rec_id:
-                        if st.button('Close', key=f'close_row_{row_idx}'):
-                            st.session_state['list_open_id'] = None
-                            st.rerun()
-                    else:
-                        if st.button('View', key=f'view_row_{row_idx}'):
-                            st.session_state['list_open_id'] = rec_id
-                            st.rerun()
-                with row_cols[5]:
-                    st.button('Edit', key=f'edit_row_{row_idx}', on_click=_switch_to_editor, args=(record_by_id[rec_id],))
-                if open_id == rec_id:
-                    st.divider()
-                    render_record_detail(rec)
-                    if st.button('Close', key=f'close_row_bottom_{row_idx}'):
-                        st.session_state['list_open_id'] = None
-                        st.rerun()
-                    st.divider()
-
-            render_pagination('bottom')
-
-    # ── Editor view ──
-    elif active_view == TAB_EDITOR:
-        if st.session_state.pop('save_success', False):
-            st.success('Record saved successfully.')
-        editor_top = st.columns([1, 1, 1, 2])
-        with editor_top[0]:
-            st.button('New', key='new_from_editor', on_click=_switch_to_editor, args=(default_record(),))
-        with editor_top[1]:
-            if 'current_record' in st.session_state and st.button('Reload'):
-                load_record_into_editor(st.session_state.current_record)
-                st.rerun()
-        with editor_top[2]:
-            if 'current_record' in st.session_state and st.button('Cancel'):
-                clear_editor_widget_state()
-                del st.session_state['current_record']
-                st.rerun()
-
-        if 'current_record' not in st.session_state:
-            st.info('Click "New" or use "Edit" on the list view to start editing.')
-        else:
-            current_record = st.session_state.current_record
-            st.divider()
-            render_general_section(current_record)
-            st.divider()
-            render_sanctions(current_record)
-            st.divider()
-            render_un_peace_operations(current_record)
-            st.divider()
-            render_non_un_operations(current_record)
-            st.divider()
-            render_single_sections(current_record)
-
-            st.divider()
-            save_cols = st.columns([1, 4])
-            with save_cols[0]:
-                if st.button('Save', type='primary'):
-                    draft = materialize_current_record()
-                    normalized, errors = normalize_record(draft)
-                    if errors:
-                        st.error('Cannot save. Please fix the following:')
-                        for error in errors:
-                            st.write(f'- {error}')
-                    else:
-                        updated = upsert_record(records, normalized)
-                        try:
-                            save_records(updated)
-                            save_public_records(updated, PUBLIC_RECORDS_PATH)
-                        except Exception as exc:
-                            st.error('Save failed. Please check file permissions and destination.')
-                            st.code(str(exc))
-                        else:
-                            clear_editor_widget_state()
-                            if 'current_record' in st.session_state:
-                                del st.session_state['current_record']
-                            st.session_state['save_success'] = True
-                            st.rerun()
+    st.divider()
+    save_cols = st.columns([1, 1, 3])
+    with save_cols[0]:
+        if st.button('保存', type='primary'):
+            draft = materialize_current_record()
+            normalized, errors = normalize_record(draft, schema)
+            if errors:
+                st.error('保存できません。以下を修正してください。')
+                for error in errors:
+                    st.write(f'- {error}')
+            else:
+                updated = upsert_record(records, normalized)
+                try:
+                    save_records(updated)
+                    save_public_records(updated, PUBLIC_RECORDS_PATH, schema)
+                except Exception as exc:
+                    st.error('保存に失敗しました。ファイル権限や保存先を確認してください。')
+                    st.code(str(exc))
+                else:
+                    st.session_state.current_record = normalized
+                    clear_editor_widget_state()
+                    st.success(f'保存しました。records: {RECORDS_PATH.name}, public: {PUBLIC_RECORDS_PATH.name}')
+                    st.rerun()
+    with save_cols[1]:
+        if st.button('入力内容を再読込'):
+            load_record_into_editor(st.session_state.current_record)
+            st.rerun()
 
 
 if __name__ == '__main__':
