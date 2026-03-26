@@ -1,165 +1,170 @@
-"""Helpers for runtime custom fields backed by schema_overrides.json."""
+"""Runtime helpers for extension fields defined in schema_overrides.json."""
 
 from __future__ import annotations
 
+from copy import deepcopy
 from datetime import datetime
 from typing import Any
 
-from schema_overrides import default_value_for_field, get_category_fields, REPEATED_CATEGORIES
+from form_spec import CATEGORY_ORDER
+from schema_overrides import REPEATED_CATEGORIES, empty_extra_payload, get_extra_fields
 
 
-CUSTOM_KEY = '_custom'
-
-
-def ensure_custom_defaults(record: dict[str, Any], schema: dict[str, Any]) -> dict[str, Any]:
-    for category in schema.get('categories', {}):
-        fields = get_category_fields(schema, category)
-        if not fields:
+def ensure_extra_containers(record: dict[str, Any], schema: dict[str, Any]) -> dict[str, Any]:
+    updated = deepcopy(record)
+    for category in CATEGORY_ORDER:
+        defs = get_extra_fields(schema, category)
+        if not defs:
             continue
         if category in REPEATED_CATEGORIES:
-            blocks = record.get(category, [])
-            if not isinstance(blocks, list):
-                continue
+            blocks = updated.get(category, [])
             for block in blocks:
-                if not isinstance(block, dict):
-                    continue
-                block.setdefault(CUSTOM_KEY, {})
-                for field in fields:
-                    block[CUSTOM_KEY].setdefault(field['key'], default_value_for_field(field))
+                if '_extra' not in block or not isinstance(block['_extra'], dict):
+                    block['_extra'] = empty_extra_payload(schema, category)
+                else:
+                    for key, default in empty_extra_payload(schema, category).items():
+                        block['_extra'].setdefault(key, default)
         else:
-            section = record.get(category)
-            if not isinstance(section, dict):
-                continue
-            section.setdefault(CUSTOM_KEY, {})
-            for field in fields:
-                section[CUSTOM_KEY].setdefault(field['key'], default_value_for_field(field))
-    return record
+            target = updated.get(category, {})
+            if not isinstance(target, dict):
+                target = {}
+                updated[category] = target
+            if '_extra' not in target or not isinstance(target['_extra'], dict):
+                target['_extra'] = empty_extra_payload(schema, category)
+            else:
+                for key, default in empty_extra_payload(schema, category).items():
+                    target['_extra'].setdefault(key, default)
+    return updated
 
 
-def empty_custom_payload(category: str, schema: dict[str, Any]) -> dict[str, Any]:
-    payload: dict[str, Any] = {}
-    for field in get_category_fields(schema, category):
-        payload[field['key']] = default_value_for_field(field)
-    return payload
-
-
-def _string(value: Any) -> str:
-    if value is None:
+def _to_string(value: Any) -> str:
+    if value in (None, ''):
         return ''
-    if isinstance(value, str):
-        return value.strip()
     return str(value).strip()
 
 
-def _bool(value: Any) -> bool:
-    if isinstance(value, bool):
-        return value
-    return _string(value).lower() in {'1', 'true', 'yes', 'y', 'on'}
-
-
-def _optional_int(value: Any, *, field: str, errors: list[str]) -> int | None:
-    raw = _string(value)
-    if raw == '':
+def _to_optional_int(value: Any, field: str, errors: list[str]) -> int | None:
+    if value in (None, ''):
         return None
     try:
-        return int(raw)
-    except (TypeError, ValueError):
-        errors.append(f'{field} は整数で入力してください。')
+        return int(str(value).strip())
+    except (ValueError, TypeError):
+        errors.append(f'{field}: must be an integer.')
         return None
 
 
-def _date_to_iso(value: Any, *, field: str, errors: list[str], required: bool = False) -> str:
-    raw = _string(value)
-    if raw == '':
-        if required:
-            errors.append(f'{field} は必須です。')
-        return ''
-    for fmt in ('%Y-%m-%d', '%d/%m/%Y', '%Y/%m/%d'):
+def _to_bool(value: Any) -> bool:
+    if isinstance(value, bool):
+        return value
+    if value in (1, '1', 'true', 'True', 'yes', 'Yes'):
+        return True
+    return False
+
+
+def _to_date(value: Any, field: str, errors: list[str]) -> str | None:
+    if value in (None, ''):
+        return None
+    text = str(value).strip()
+    for fmt in ('%Y-%m-%d', '%Y%m%d', '%d/%m/%Y'):
         try:
-            return datetime.strptime(raw, fmt).date().isoformat()
+            return datetime.strptime(text, fmt).strftime('%Y-%m-%d')
         except ValueError:
-            pass
-    errors.append(f'{field} の日付形式が正しくありません。YYYY-MM-DD または DD/MM/YYYY を使用してください。')
-    return ''
+            continue
+    errors.append(f'{field}: invalid date. Use YYYY-MM-DD or YYYYMMDD or DD/MM/YYYY.')
+    return None
 
 
-def normalize_custom_fields(category: str, raw_custom: Any, schema: dict[str, Any], errors: list[str], *, field_prefix: str) -> dict[str, Any]:
-    fields = get_category_fields(schema, category)
-    if not fields:
-        return {}
-    source = raw_custom if isinstance(raw_custom, dict) else {}
+def normalize_extra_payload(payload: dict[str, Any], field_defs: list[dict[str, Any]], field_prefix: str, errors: list[str]) -> dict[str, Any]:
     normalized: dict[str, Any] = {}
-    for field in fields:
+    source = payload if isinstance(payload, dict) else {}
+    for field in field_defs:
         key = field['key']
         label = f'{field_prefix} / {field["label"]}'
-        value = source.get(key)
-        field_type = field['type']
-        if field_type in {'text', 'textarea'}:
-            norm = _string(value)
-        elif field_type == 'int':
-            norm = _optional_int(value, field=label, errors=errors)
-        elif field_type == 'bool':
-            norm = _bool(value)
-        elif field_type == 'date':
-            norm = _date_to_iso(value, field=label, errors=errors, required=field['required']) or ''
-        elif field_type == 'select':
-            if value in (None, ''):
-                norm = None
-            elif value not in field['options']:
-                errors.append(f'{label} の値が選択肢にありません。')
-                norm = None
-            else:
-                norm = value
-        elif field_type == 'multiselect':
-            raw_values = value if isinstance(value, list) else ([value] if value not in (None, '') else [])
-            norm = []
+        raw = source.get(key)
+        if field['type'] in {'text', 'textarea'}:
+            value = _to_string(raw)
+        elif field['type'] == 'integer':
+            value = _to_optional_int(raw, label, errors)
+        elif field['type'] == 'boolean':
+            value = _to_bool(raw)
+        elif field['type'] == 'date':
+            value = _to_date(raw, label, errors)
+        elif field['type'] == 'select':
+            value = None if raw in (None, '') else str(raw).strip()
+            if value is not None and value not in field['options']:
+                errors.append(f'{label}: value must be one of the configured options.')
+                value = None
+        elif field['type'] == 'multiselect':
+            values = raw if isinstance(raw, list) else ([] if raw in (None, '') else [raw])
+            cleaned: list[str] = []
             seen: set[str] = set()
-            for item in raw_values:
-                if item in ('', None):
+            for item in values:
+                text = str(item).strip()
+                if not text:
                     continue
-                if item not in field['options']:
-                    errors.append(f'{label} の値 {item} は選択肢にありません。')
+                if text not in field['options']:
+                    errors.append(f'{label}: contains a value outside the configured options.')
                     continue
-                if item not in seen:
-                    seen.add(item)
-                    norm.append(item)
+                if text not in seen:
+                    seen.add(text)
+                    cleaned.append(text)
+            value = cleaned
         else:
-            norm = _string(value)
+            value = raw
         if field['required']:
-            if norm in (None, '', []):
-                errors.append(f'{label} は必須です。')
-        normalized[key] = norm
+            if field['type'] == 'multiselect' and not value:
+                errors.append(f'{label}: required.')
+            elif field['type'] == 'boolean':
+                pass
+            elif value in (None, ''):
+                errors.append(f'{label}: required.')
+        normalized[key] = value
     return normalized
 
 
-def collect_searchable_custom_tags(record: dict[str, Any], schema: dict[str, Any]) -> list[str]:
+def payload_has_meaningful_value(payload: dict[str, Any]) -> bool:
+    if not isinstance(payload, dict):
+        return False
+    for value in payload.values():
+        if isinstance(value, list) and value:
+            return True
+        if isinstance(value, bool) and value:
+            return True
+        if value not in (None, '', False, []):
+            return True
+    return False
+
+
+def extract_searchable_tags(record: dict[str, Any], schema: dict[str, Any]) -> list[str]:
     tags: list[str] = []
     seen: set[str] = set()
-
-    def add_value(value: Any) -> None:
-        if value in (None, '', False):
-            return
-        if isinstance(value, list):
-            for item in value:
-                add_value(item)
-            return
-        text = str(value)
-        if text not in seen:
-            seen.add(text)
-            tags.append(text)
-
-    for category, fields in schema.get('categories', {}).items():
-        searchable_keys = [field['key'] for field in fields if field.get('searchable')]
-        if not searchable_keys:
+    for category in CATEGORY_ORDER:
+        defs = [field for field in get_extra_fields(schema, category) if field.get('searchable')]
+        if not defs:
             continue
         if category in REPEATED_CATEGORIES:
             for block in record.get(category, []):
-                custom = block.get(CUSTOM_KEY, {}) if isinstance(block, dict) else {}
-                for key in searchable_keys:
-                    add_value(custom.get(key))
+                payload = block.get('_extra', {}) if isinstance(block, dict) else {}
+                for field in defs:
+                    raw = payload.get(field['key'])
+                    values = raw if isinstance(raw, list) else [raw]
+                    for item in values:
+                        if item in (None, '', False):
+                            continue
+                        text = str(item)
+                        if text not in seen:
+                            seen.add(text)
+                            tags.append(text)
         else:
-            section = record.get(category, {})
-            custom = section.get(CUSTOM_KEY, {}) if isinstance(section, dict) else {}
-            for key in searchable_keys:
-                add_value(custom.get(key))
+            payload = record.get(category, {}).get('_extra', {}) if isinstance(record.get(category), dict) else {}
+            for field in defs:
+                raw = payload.get(field['key'])
+                values = raw if isinstance(raw, list) else [raw]
+                for item in values:
+                    if item in (None, '', False):
+                        continue
+                    text = str(item)
+                    if text not in seen:
+                        seen.add(text)
+                        tags.append(text)
     return tags

@@ -1,3 +1,37 @@
 {
-  "categories": {}
+  "option_overrides": {
+    "general.geographical_locations": {
+      "append_options": [],
+      "remove_options": []
+    },
+    "membership.new_member_name": {
+      "append_options": [],
+      "remove_options": []
+    }
+  },
+  "extra_fields": {
+    "general": [
+      {
+        "key": "adoption_place",
+        "label": "Adoption place",
+        "type": "select",
+        "required": false,
+        "searchable": true,
+        "active": false,
+        "options": [
+          "New York"
+        ],
+        "help": "Example extension field. Set active=true to enable."
+      }
+    ],
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": [],
+    "other_subsidiary_organs": [],
+    "thematic_resolutions": [],
+    "membership": [],
+    "appointment_related": [],
+    "other": []
+  }
 }

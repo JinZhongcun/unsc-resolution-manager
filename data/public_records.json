@@ -54,7 +54,10 @@
         "references_other": [],
         "threat_level": null,
         "charter_invoked": [],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -117,7 +120,10 @@
         "references_other": [],
         "threat_level": null,
         "charter_invoked": [],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -188,7 +194,10 @@
         "charter_invoked": [
           "Chapter VII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -289,7 +298,10 @@
         "charter_invoked": [
           "Chapter VII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -380,7 +392,10 @@
         "references_other": [],
         "threat_level": null,
         "charter_invoked": [],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [
@@ -477,7 +492,10 @@
         "charter_invoked": [
           "Chapter VII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -544,7 +562,10 @@
         "charter_invoked": [
           "Chapter VI"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -608,7 +629,10 @@
         "references_other": [],
         "threat_level": "Threat to Peace",
         "charter_invoked": [],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -684,7 +708,10 @@
         "charter_invoked": [
           "Chapter VII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -814,7 +841,10 @@
           "Chapter VII",
           "Chapter VIII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -887,7 +917,10 @@
           "Chapter VII",
           "Chapter VIII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -986,7 +1019,10 @@
           "Chapter VII",
           "Chapter VIII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -1059,7 +1095,10 @@
         "charter_invoked": [
           "Chapter VII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -1166,7 +1205,10 @@
           "Chapter VII",
           "Chapter VIII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -1267,7 +1309,10 @@
           "Chapter VII",
           "Chapter VIII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -1333,7 +1378,10 @@
         "charter_invoked": [
           "Chapter VI"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -1402,7 +1450,10 @@
           "Chapter VII",
           "Chapter VIII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -1475,7 +1526,10 @@
         "charter_invoked": [
           "Chapter VI"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -1580,7 +1634,10 @@
         "charter_invoked": [
           "Chapter VII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -1687,7 +1744,10 @@
           "Chapter VII",
           "Chapter VIII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -1792,7 +1852,10 @@
           "Chapter VII",
           "Chapter VIII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -1886,7 +1949,10 @@
         "references_other": [],
         "threat_level": "Act of Aggression",
         "charter_invoked": [],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -1952,7 +2018,10 @@
         "charter_invoked": [
           "Chapter VI"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -2018,7 +2087,10 @@
         "charter_invoked": [
           "Chapter VI"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -2082,7 +2154,10 @@
         "references_other": [],
         "threat_level": "Threat to Peace",
         "charter_invoked": [],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -2149,7 +2224,10 @@
         "charter_invoked": [
           "Chapter VII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -2224,7 +2302,10 @@
           "Chapter VII",
           "Chapter VIII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -2320,7 +2401,10 @@
         "references_other": [],
         "threat_level": "Threat to Peace",
         "charter_invoked": [],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -2393,7 +2477,10 @@
         "charter_invoked": [
           "Chapter VI"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [
@@ -2493,7 +2580,10 @@
         "references_other": [],
         "threat_level": null,
         "charter_invoked": [],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -2599,7 +2689,10 @@
         "charter_invoked": [
           "Chapter VI"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [
@@ -2700,7 +2793,10 @@
           "Chapter VII",
           "Chapter VIII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -2772,7 +2868,10 @@
         "charter_invoked": [
           "Chapter VI"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -2879,7 +2978,10 @@
         "references_other": [],
         "threat_level": "Breach of Peace",
         "charter_invoked": [],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -3009,7 +3111,10 @@
         "charter_invoked": [
           "Chapter VI"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -3073,7 +3178,10 @@
         "references_other": [],
         "threat_level": "Threat to Peace",
         "charter_invoked": [],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -3142,7 +3250,10 @@
           "Chapter VII",
           "Chapter VIII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -3211,7 +3322,10 @@
         "references_other": [],
         "threat_level": null,
         "charter_invoked": [],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -3310,7 +3424,10 @@
         "charter_invoked": [
           "Chapter VI"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -3383,7 +3500,10 @@
         "charter_invoked": [
           "Chapter VII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -3485,7 +3605,10 @@
         "references_other": [],
         "threat_level": "Threat to Peace",
         "charter_invoked": [],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -3588,7 +3711,10 @@
         "charter_invoked": [
           "Chapter VII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -3685,7 +3811,10 @@
         "charter_invoked": [
           "Chapter VII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -3765,7 +3894,10 @@
           "Chapter VII",
           "Chapter VIII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -3894,7 +4026,10 @@
         "charter_invoked": [
           "Chapter VII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -3972,7 +4107,10 @@
         "charter_invoked": [
           "Chapter VI"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -4114,7 +4252,10 @@
         "charter_invoked": [
           "Chapter VII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -4249,7 +4390,10 @@
         "charter_invoked": [
           "Chapter VII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -4359,7 +4503,10 @@
           "Chapter VII",
           "Chapter VIII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -4499,7 +4646,10 @@
         "charter_invoked": [
           "Chapter VII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -4633,7 +4783,10 @@
         "charter_invoked": [
           "Chapter VII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -4735,7 +4888,10 @@
         "charter_invoked": [
           "Chapter VII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -4831,7 +4987,10 @@
         "charter_invoked": [
           "Chapter VII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -4905,7 +5064,10 @@
           "Chapter VII",
           "Chapter VIII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [
@@ -5009,7 +5171,10 @@
         "charter_invoked": [
           "Chapter VII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [
@@ -5115,7 +5280,10 @@
         "charter_invoked": [
           "Chapter VI"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [
@@ -5215,7 +5383,10 @@
           "Chapter VII",
           "Chapter VIII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -5281,7 +5452,10 @@
         "charter_invoked": [
           "Chapter VI"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -5349,7 +5523,10 @@
         "references_other": [],
         "threat_level": "Breach of Peace",
         "charter_invoked": [],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -5460,7 +5637,10 @@
           "Chapter VII",
           "Chapter VIII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -5590,7 +5770,10 @@
         "charter_invoked": [
           "Chapter VI"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -5662,7 +5845,10 @@
         "charter_invoked": [
           "Chapter VI"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -5757,7 +5943,10 @@
         "references_other": [],
         "threat_level": "Breach of Peace",
         "charter_invoked": [],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -5828,7 +6017,10 @@
         "charter_invoked": [
           "Chapter VII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -5928,7 +6120,10 @@
           "Chapter VII",
           "Chapter VIII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -5992,7 +6187,10 @@
         "references_other": [],
         "threat_level": "Act of Aggression",
         "charter_invoked": [],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -6066,7 +6264,10 @@
           "Chapter VII",
           "Chapter VIII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -6165,7 +6366,10 @@
         "charter_invoked": [
           "Chapter VII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -6239,7 +6443,10 @@
           "Chapter VII",
           "Chapter VIII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -6350,7 +6557,10 @@
           "Chapter VII",
           "Chapter VIII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -6479,7 +6689,10 @@
         "charter_invoked": [
           "Chapter VII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -6551,7 +6764,10 @@
         "charter_invoked": [
           "Chapter VII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -6648,7 +6864,10 @@
         "charter_invoked": [
           "Chapter VI"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -6714,7 +6933,10 @@
         "charter_invoked": [
           "Chapter VI"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -6781,7 +7003,10 @@
         "charter_invoked": [
           "Chapter VI"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -6850,7 +7075,10 @@
           "Chapter VII",
           "Chapter VIII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -6919,7 +7147,10 @@
           "Chapter VII",
           "Chapter VIII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -6990,7 +7221,10 @@
         "charter_invoked": [
           "Chapter VI"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -7084,7 +7318,10 @@
         "references_other": [],
         "threat_level": "Threat to Peace",
         "charter_invoked": [],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -7157,7 +7394,10 @@
           "Chapter VII",
           "Chapter VIII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -7255,7 +7495,10 @@
         "charter_invoked": [
           "Chapter VII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -7330,7 +7573,10 @@
           "Chapter VII",
           "Chapter VIII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [
@@ -7434,7 +7680,10 @@
           "Chapter VII",
           "Chapter VIII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [
@@ -7537,7 +7786,10 @@
           "Chapter VII",
           "Chapter VIII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -7638,7 +7890,10 @@
         "charter_invoked": [
           "Chapter VII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -7740,7 +7995,10 @@
         "charter_invoked": [
           "Chapter VI"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -7839,7 +8097,10 @@
         "charter_invoked": [
           "Chapter VII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -7907,7 +8168,10 @@
         "references_other": [],
         "threat_level": null,
         "charter_invoked": [],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [
@@ -8012,7 +8276,10 @@
         "charter_invoked": [
           "Chapter VI"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -8139,7 +8406,10 @@
         "charter_invoked": [
           "Chapter VII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -8216,7 +8486,10 @@
         "charter_invoked": [
           "Chapter VII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -8349,7 +8622,10 @@
         "references_other": [],
         "threat_level": "Breach of Peace",
         "charter_invoked": [],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [
@@ -8448,7 +8724,10 @@
         "charter_invoked": [
           "Chapter VII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -8522,7 +8801,10 @@
         "references_other": [],
         "threat_level": "Breach of Peace",
         "charter_invoked": [],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -8658,7 +8940,10 @@
         "charter_invoked": [
           "Chapter VII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [
@@ -8757,7 +9042,10 @@
         "charter_invoked": [
           "Chapter VI"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -8821,7 +9109,10 @@
         "references_other": [],
         "threat_level": "Threat to Peace",
         "charter_invoked": [],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -8885,7 +9176,10 @@
         "references_other": [],
         "threat_level": "Threat to Peace",
         "charter_invoked": [],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -8955,7 +9249,10 @@
         "references_other": [],
         "threat_level": "Threat to Peace",
         "charter_invoked": [],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [
@@ -9059,7 +9356,10 @@
         "charter_invoked": [
           "Chapter VI"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -9160,7 +9460,10 @@
           "Chapter VII",
           "Chapter VIII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -9234,7 +9537,10 @@
         "charter_invoked": [
           "Chapter VI"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [
@@ -9343,7 +9649,10 @@
         "charter_invoked": [
           "Chapter VI"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [
         {
@@ -9474,7 +9783,10 @@
           "Chapter VII",
           "Chapter VIII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],
@@ -9546,7 +9858,10 @@
         "charter_invoked": [
           "Chapter VI"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [
@@ -9643,7 +9958,10 @@
         "charter_invoked": [
           "Chapter VII"
         ],
-        "referrals": ""
+        "referrals": "",
+        "_extra": {
+          "adoption_location": null
+        }
       },
       "sanctions": [],
       "un_peace_operations": [],

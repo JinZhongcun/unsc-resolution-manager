@@ -1,4 +1,4 @@
-"""Export records.json into a front-end friendly JSON file."""
+"""Export records.json into front-end friendly JSON files."""
 
 from __future__ import annotations
 
@@ -6,8 +6,9 @@ import json
 from pathlib import Path
 from typing import Any
 
+from custom_fields import extract_searchable_tags
 from form_spec import CATEGORY_LABELS
-from custom_fields import collect_searchable_custom_tags
+from schema_overrides import CATEGORY_ORDER, public_schema_from_overrides
 
 
 def _collect_values(value: Any) -> list[str]:
@@ -20,6 +21,8 @@ def _collect_values(value: Any) -> list[str]:
         return results
     if isinstance(value, dict):
         for item in value.values():
+            if item == value.get('_extra'):
+                continue
             results.extend(_collect_values(item))
         return results
     results.append(str(value))
@@ -33,13 +36,14 @@ def _category_has_data(value: Any) -> bool:
     if isinstance(value, list):
         return any(_category_has_data(v) for v in value)
     if isinstance(value, dict):
-        return any(_category_has_data(v) for v in value.values())
+        core_items = {k: v for k, v in value.items() if k != '_extra'}
+        extra = value.get('_extra', {}) if isinstance(value.get('_extra', {}), dict) else {}
+        return any(_category_has_data(v) for v in core_items.values()) or any(_category_has_data(v) for v in extra.values())
     return True
 
 
 
 def _tag_filters(record: dict[str, Any], schema: dict[str, Any] | None = None) -> list[str]:
-    schema = schema or {'categories': {}}
     tags: list[str] = []
     seen: set[str] = set()
 
@@ -85,8 +89,11 @@ def _tag_filters(record: dict[str, Any], schema: dict[str, Any] | None = None) -
     add(record.get('other_subsidiary_organs', {}).get('subsidiary_organ_type'))
     add(record.get('membership', {}).get('new_member_name'))
     add(record.get('appointment_related', {}).get('organization'))
-    for item in collect_searchable_custom_tags(record, schema):
-        add(item)
+
+    for item in extract_searchable_tags(record, schema or {}):
+        if item not in seen:
+            seen.add(item)
+            tags.append(item)
     return tags
 
 
@@ -111,7 +118,6 @@ def _categories_present(record: dict[str, Any]) -> list[str]:
 
 
 def build_public_record(record: dict[str, Any], schema: dict[str, Any] | None = None) -> dict[str, Any]:
-    schema = schema or {'categories': {}}
     general = record.get('general', {})
     date_value = general.get('date') or ''
     try:
@@ -128,13 +134,14 @@ def build_public_record(record: dict[str, Any], schema: dict[str, Any] | None = 
         'geographical_locations': general.get('geographical_locations', []),
         'categories_present': _categories_present(record),
         'tag_filters': _tag_filters(record, schema),
+        'created_at': record.get('created_at'),
+        'updated_at': record.get('updated_at'),
         'detail': record,
     }
 
 
 
 def generate_public_records(records: list[dict[str, Any]], schema: dict[str, Any] | None = None) -> list[dict[str, Any]]:
-    schema = schema or {'categories': {}}
     return [build_public_record(record, schema) for record in records]
 
 
@@ -145,4 +152,14 @@ def save_public_records(records: list[dict[str, Any]], path: str | Path, schema:
     tmp = path.with_suffix(path.suffix + '.tmp')
     public_records = generate_public_records(records, schema)
     tmp.write_text(json.dumps(public_records, ensure_ascii=False, indent=2), encoding='utf-8')
+    tmp.replace(path)
+
+
+
+def save_public_schema(schema: dict[str, Any], path: str | Path) -> None:
+    path = Path(path)
+    path.parent.mkdir(parents=True, exist_ok=True)
+    tmp = path.with_suffix(path.suffix + '.tmp')
+    payload = public_schema_from_overrides(schema)
+    tmp.write_text(json.dumps(payload, ensure_ascii=False, indent=2), encoding='utf-8')
     tmp.replace(path)

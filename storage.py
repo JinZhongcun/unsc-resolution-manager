@@ -10,6 +10,8 @@ from typing import Any
 DATA_DIR = Path(__file__).resolve().parent / 'data'
 RECORDS_PATH = DATA_DIR / 'records.json'
 PUBLIC_RECORDS_PATH = DATA_DIR / 'public_records.json'
+PUBLIC_SCHEMA_PATH = DATA_DIR / 'public_schema.json'
+SCHEMA_OVERRIDES_PATH = DATA_DIR / 'schema_overrides.json'
 
 
 
@@ -19,6 +21,10 @@ def ensure_data_files() -> None:
         RECORDS_PATH.write_text('[]\n', encoding='utf-8')
     if not PUBLIC_RECORDS_PATH.exists():
         PUBLIC_RECORDS_PATH.write_text('[]\n', encoding='utf-8')
+    if not PUBLIC_SCHEMA_PATH.exists():
+        PUBLIC_SCHEMA_PATH.write_text('{}\n', encoding='utf-8')
+    if not SCHEMA_OVERRIDES_PATH.exists():
+        SCHEMA_OVERRIDES_PATH.write_text('\n', encoding='utf-8')
 
 
 

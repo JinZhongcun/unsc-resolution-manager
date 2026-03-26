@@ -1,0 +1,44 @@
+{
+  "extra_fields": {
+    "general": [
+      {
+        "key": "adoption_location",
+        "label": "Adoption location",
+        "type": "select",
+        "required": false,
+        "searchable": true,
+        "options": [
+          "New York",
+          "Geneva",
+          "Nairobi"
+        ],
+        "help": ""
+      }
+    ],
+    "sanctions": [],
+    "un_peace_operations": [],
+    "non_un_operations_enforcement_actions": [],
+    "criminal_tribunals": [],
+    "other_subsidiary_organs": [],
+    "thematic_resolutions": [],
+    "membership": [],
+    "appointment_related": [],
+    "other": []
+  },
+  "option_overrides": {
+    "general.geographical_locations": {
+      "append_options": [],
+      "remove_options": [],
+      "replace_options": []
+    },
+    "membership.new_member_name": {
+      "append_options": [],
+      "remove_options": [],
+      "replace_options": []
+    }
+  },
+  "notes": [
+    "This file describes extension fields and option overrides.",
+    "The core fixed form remains defined in the backend code and workbook-derived masters."
+  ]
+}
